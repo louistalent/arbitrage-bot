@@ -1,9 +1,9 @@
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import React, { useState, useEffect } from 'react';
 
 
-export const errHandler = (err: any) => {
+export const errHandler = (err) => {
     if (err) {
         console.log(err)
         if (err.code === 4001) {
@@ -19,16 +19,16 @@ export const errHandler = (err: any) => {
     }
 }
 
-export const toHex = (val: string | number): string => new window.Web3().utils.toHex(val)
+export const toHex = (val) => new window.Web3().utils.toHex(val)
 
-export const tips = (html: string) => {
-    toast(html, {
-        position: "top-right",
-        autoClose: 4000,
-    });
-}
+// export const tips = (html) => {
+//     toast(html, {
+//         position: "top-right",
+//         autoClose: 4000,
+//     });
+// }
 
-export const simpleAddress = (address: string, first?: number, second?: number) => {
+export const simpleAddress = (address, first, second) => {
     let one; let two; let newAddress;
     if (address && first && second) {
         one = address.slice(0, first);
@@ -40,7 +40,7 @@ export const simpleAddress = (address: string, first?: number, second?: number) 
     newAddress = one + '...' + two;
     return newAddress;
 }
-export const copyToClipboard = (text: string) => {
+export const copyToClipboard = (text) => {
     var textField = document.createElement('textarea')
     textField.innerText = text
     document.body.appendChild(textField)
