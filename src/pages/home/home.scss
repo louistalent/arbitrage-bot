@@ -1,0 +1,123 @@
+.exchange-section {
+    background: rgba(255, 255, 255, 0.88);
+
+    .smart {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        border: 2px solid rgba(251, 191, 4, 0.05);
+        transform: rotate(-9.28deg);
+        width: 180px;
+        height: 70px;
+        border-radius: 50%;
+    }
+
+    .security-card {
+        img {
+            width: 56px;
+            height: 56px;
+        }
+    }
+
+    .arb-btn {
+        display: inline-block;
+        margin: 0px;
+        border-radius: 25px;
+        padding: 12px 16px;
+        font-weight: 600;
+        background-color: rgb(228, 250, 252);
+        color: rgb(0, 178, 200);
+    }
+
+}
+
+.icon-section {
+    background-color: rgb(247, 253, 253);
+}
+
+.intro-section {
+    background: rgba(255, 255, 255, 0.88);
+}
+
+
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #787878 #b82828;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0F0F0F;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #464545;
+    border-radius: 10px;
+}
+
+.request-setting-modal-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(0px);
+    animation: 0.3s ease-in-out 0s 1 normal forwards running opacity-animation;
+    overflow-y: auto;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    z-index: 99999999999;
+}
+
+.request-setting-modal-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99999;
+}
+
+.request-setting-modal-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(100, 100, 100, 0.7);
+    z-index: 9998;
+}
+
+.request-setting-modal-body {
+    max-width: 400px;
+    margin: auto;
+    width: 100%;
+    background: #e7e4e4;
+    z-index: 9999;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.request-modal-header {
+    border-bottom: 1px rgba(128, 128, 128, 0.25) solid;
+    background: #e7e4e4;
+}
+
+.modal-content {
+    overflow: auto;
+    height: 100%;
+    max-height: 700px;
+}

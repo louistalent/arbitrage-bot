@@ -1,0 +1,50 @@
+footer {
+    width: 100%;
+    // background: #0F0F0F;
+    color: rgb(13, 12, 67);
+    border-top: 1px rgba(0, 0, 0, 0.1) solid;
+
+    div a {
+        display: block;
+        cursor: pointer;
+        // padding: 0 20px;
+
+        &:hover {
+            // background-color: #eee;
+            color: #FBBF04;
+        }
+    }
+
+    h6 {
+        &:hover {
+            cursor: pointer;
+            color: #FBBF04;
+        }
+    }
+
+    p {
+        color: rgb(13, 12, 67) !important;
+        margin: 0 !important;
+        font-size: 14px;
+        // margin-top: 20px;
+    }
+
+    h6 {
+        color: rgb(13, 12, 67) !important;
+    }
+
+    h5 {
+        color: rgb(0, 178, 200);
+    }
+
+    .submit-btn {
+        border-radius: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #FBBF04;
+        color: black;
+    }
+
+    @media (max-width:576px) {}
+}
