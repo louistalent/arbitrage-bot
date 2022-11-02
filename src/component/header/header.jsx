@@ -1,8 +1,6 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector, } from "react-redux";
-import { simpleAddress } from "../../util";
 import { BsChevronDown, BsChevronCompactUp } from "react-icons/bs";
 import { AiOutlineMinus, AiOutlineClose } from "react-icons/ai";
 import { FaTwitter, FaTelegramPlane, FaInstagram, FaFacebookF, FaGithub } from "react-icons/fa";
@@ -11,7 +9,6 @@ import WalletModal from '../WalletModal';
 
 
 const Header = () => {
-	const G = useSelector((state: any) => state);
 	const [walletModal, setWalletModal] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
 

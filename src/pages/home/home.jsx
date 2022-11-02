@@ -1,22 +1,12 @@
 import { useState, useEffect } from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import Slice from "../../reducer";
-import axios from "axios";
 import { FaTelegramPlane, FaPlus, FaMinus } from "react-icons/fa";
-
-import FAQ from '../../component/fap/fap';
 import Layout from "../../component/layout/layout";
 import WalletModal from "../../component/WalletModal";
 import "./home.scss";
 
 const Home = () => {
-	const global = useSelector((state: any) => state);
-	const dispatch = useDispatch();
-	const update = (payload: { [key: string]: any }) => {
-		dispatch(Slice.actions.update(payload));
-	};
 
 	return (
 		<Layout>
@@ -105,7 +95,7 @@ const Home = () => {
 									</div>
 									<div>
 										<span className="black-color">
-											Optimus is an AI trading bot that will generate revenue for OPT3 hodlers. Optimus earns about 1% per day, just by trading the OPT3 token.
+											Arbitrage Plus is an AI trading bot that will generate revenue for OPT3 hodlers. Arbitrage Plus earns about 1% per day, just by trading the OPT3 token.
 										</span>
 									</div>
 								</div>
@@ -128,7 +118,7 @@ const Home = () => {
 										Zero Fees
 									</h4>
 									<span className="black-color">
-										We believe that passive income is for everyone. You shouldn't have to pay crazy high fees. Optimus is 100% free to use. You're welcome!
+										We believe that passive income is for everyone. You shouldn't have to pay crazy high fees. Arbitrage Plus is 100% free to use. You're welcome!
 										<br />
 										<br />
 									</span>

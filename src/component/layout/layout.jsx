@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from '../header/header';
 import Footer from '../footer/footer';
 import "./layout.scss";
-const Layout = (props: any) => {
+const Layout = (props) => {
     return (<>
         <Header />
         <main>

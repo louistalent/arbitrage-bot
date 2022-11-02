@@ -1,17 +1,10 @@
 import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import Slice from "../reducer";
 import { AiOutlineClose, AiOutlineDown } from "react-icons/ai";
 
-const WalletModal = ({ setWalletModal }: any) => {
-	const global = useSelector((state: any) => state);
-	const dispatch = useDispatch();
-	const update = (payload: { [key: string]: any }) => {
-		dispatch(Slice.actions.update(payload));
-	};
+const WalletModal = ({ setWalletModal }) => {
 
 
-	const [height, setHeight] = useState<number>(0);
+	const [height, setHeight] = useState(0);
 	useEffect(() => {
 		setHeight(window.innerHeight);
 	}, [window.innerHeight])
