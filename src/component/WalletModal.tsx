@@ -47,7 +47,7 @@ const WalletModal = ({ setWalletModal }: any) => {
 											<img src="/assets/wallet/metamask.png" alt="" className="" style={{ width: '50px', height: '50px' }} />
 										</div>
 										<div className="flex1 text-center">
-											<h3 className="black-color cursor-pointer hover:text-blue-500">Metamask</h3>
+											<h4 className="black-color cursor-pointer hover:text-blue-500">Metamask</h4>
 										</div>
 									</div>
 								</div>
@@ -59,7 +59,7 @@ const WalletModal = ({ setWalletModal }: any) => {
 											<img src="/assets/wallet/coinbase.png" alt="" className="" style={{ width: '50px', height: '50px' }} />
 										</div>
 										<div className="flex1 text-center">
-											<h3 className="black-color cursor-pointer hover:text-blue-500">Coinbase</h3>
+											<h4 className="black-color cursor-pointer hover:text-blue-500">Coinbase</h4>
 										</div>
 									</div>
 								</div>
@@ -68,10 +68,10 @@ const WalletModal = ({ setWalletModal }: any) => {
 								<div className="col-sm-12 col-md-12 mb-6">
 									<div className="rect-frame-modal w-full flex items-center justify-between">
 										<div className="">
-											<img src="/assets/wallet/trust.png" alt="" className="" style={{ width: '50px', height: '50px' }} />
+											<img src="/assets/wallet/walletconnect.png" alt="" className="" style={{ width: '50px', height: '50px' }} />
 										</div>
 										<div className="flex1 text-center">
-											<h3 className="black-color cursor-pointer hover:text-blue-500">Trust</h3>
+											<h4 className="black-color cursor-pointer hover:text-blue-500">Wallet&nbsp;Connect</h4>
 										</div>
 									</div>
 								</div>
