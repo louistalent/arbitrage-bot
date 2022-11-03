@@ -1,14 +1,42 @@
 import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineDown } from "react-icons/ai";
+import { injected, walletconnect, walletlink } from '../util/connector';
+import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core';
+// import { toast } from 'react-toastify';
 
 const WalletModal = ({ setWalletModal }) => {
 
-
+	const { activate, connector,account,library, ...props } = useWeb3React();
 	const [height, setHeight] = useState(0);
 	useEffect(() => {
 		setHeight(window.innerHeight);
 	}, [window.innerHeight])
-
+	const connect = async(type)=>{
+		console.log(type)
+		if(type=="metamask")
+		{
+			try {
+				 await activate(injected, undefined, true,(error) => console.log(error));
+			} catch (e) {
+				// toast.error(e.message)
+				console.log(e.message)
+			}
+		}else if(type=="walletconnect"){
+			try {
+				await activate(walletconnect, undefined, true,(error) => console.log(error));
+			} catch (error) {
+				console.log(error)
+				// toast.error(error)
+			}
+		}else if(type=="coinbase"){
+			try {
+				await activate(walletlink, undefined, true,(error) => console.log(error));
+			} catch (error) {
+				console.log(error)
+				// toast.error(error)
+			}
+		}
+	}
 	return (
 		<>
 
@@ -35,7 +63,7 @@ const WalletModal = ({ setWalletModal }) => {
 						<div className="mt-6">
 							<div className="row flex-1">
 								<div className="col-sm-12 col-md-12 mb-6">
-									<div className="rect-frame-modal w-full flex items-center justify-between">
+									<div className="rect-frame-modal w-full flex items-center justify-between" onClick={()=>connect("metamask")}>
 										<div className="">
 											<img src="/assets/wallet/metamask.png" alt="" className="" style={{ width: '50px', height: '50px' }} />
 										</div>
@@ -47,24 +75,24 @@ const WalletModal = ({ setWalletModal }) => {
 							</div>
 							<div className="row flex-1">
 								<div className="col-sm-12 col-md-12 mb-6">
-									<div className="rect-frame-modal w-full flex items-center justify-between">
+									<div className="rect-frame-modal w-full flex items-center justify-between" onClick={()=>connect("walletconnect")}>
 										<div className="">
-											<img src="/assets/wallet/coinbase.png" alt="" className="" style={{ width: '50px', height: '50px' }} />
+											<img src="/assets/wallet/walletconnect.png" alt="" className="" style={{ width: '50px', height: '50px' }} />
 										</div>
 										<div className="flex1 text-center">
-											<h4 className="black-color cursor-pointer hover:text-blue-500">Coinbase</h4>
+											<h4 className="black-color cursor-pointer hover:text-blue-500">Wallet&nbsp;Connect</h4>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div className="row flex-1">
 								<div className="col-sm-12 col-md-12 mb-6">
-									<div className="rect-frame-modal w-full flex items-center justify-between">
+									<div className="rect-frame-modal w-full flex items-center justify-between" onClick={()=>connect("coinbase")}>
 										<div className="">
-											<img src="/assets/wallet/walletconnect.png" alt="" className="" style={{ width: '50px', height: '50px' }} />
+											<img src="/assets/wallet/coinbase.png" alt="" className="" style={{ width: '50px', height: '50px' }} />
 										</div>
 										<div className="flex1 text-center">
-											<h4 className="black-color cursor-pointer hover:text-blue-500">Wallet&nbsp;Connect</h4>
+											<h4 className="black-color cursor-pointer hover:text-blue-500">Coinbase</h4>
 										</div>
 									</div>
 								</div>
