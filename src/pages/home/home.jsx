@@ -119,13 +119,13 @@ const Home = () => {
 									</div>
 									<div>
 										<h4 className="black-color">
-											AI Trading Bot
+											Arbitrage Trading Bot
 										</h4>
 
 									</div>
 									<div>
 										<span className="black-color">
-											Arbitrage Plus is an AI trading bot that will generate revenue for OPT3 hodlers. Arbitrage Plus earns about 1% per day, just by trading the OPT3 token.
+											Arbitrage Plus is a proprietary trading bot that will generate profits for investors via risk-free exchange & triangular arbitrage. Arbitrage Plus earns about 2-3% daily, and we distribute 1% daily returns to our investors.
 										</span>
 									</div>
 								</div>
@@ -137,10 +137,7 @@ const Home = () => {
 										Daily Income
 									</h4>
 									<span className="black-color">
-										Holding OPT3 is the best way to earn passive income from AI bot trading. Earn daily compound interest simply by holding OPT3 in your wallet.
-
-										<br />
-										<br />
+										Arbitrage Plus automatically pays out 1% daily returns, including the weekends, as our bots are running 24/7. You have the option to manually transfer your profits to your stake to compound your returns.
 									</span>
 								</div>
 							</div>
@@ -152,6 +149,8 @@ const Home = () => {
 									</h4>
 									<span className="black-color">
 										We believe that passive income is for everyone. You shouldn't have to pay crazy high fees. Arbitrage Plus is 100% free to use. You're welcome!
+
+										<br />
 										<br />
 									</span>
 								</div>
