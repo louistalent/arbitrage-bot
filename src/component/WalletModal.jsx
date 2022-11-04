@@ -5,7 +5,7 @@ import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core';
 // import { toast } from 'react-toastify';
 import { RiArrowRightLine } from "react-icons/ri";
 
-const WalletModal = ({ setWalletModal, walletModal }) => {
+const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 
 	const { activate, connector, account, library, ...props } = useWeb3React();
 	const [height, setHeight] = useState(0);
@@ -17,13 +17,26 @@ const WalletModal = ({ setWalletModal, walletModal }) => {
 		if (type == "metamask") {
 			try {
 				await activate(injected, undefined, true, (error) => console.log(error));
+				if (account) {
+					setIsWalletConnect(true)
+					setWalletModal(false)
+				} else {
+					setIsWalletConnect(false)
+				}
 			} catch (e) {
+				setIsWalletConnect(false)
 				// toast.error(e.message)
 				console.log(e.message)
 			}
 		} else if (type == "walletconnect") {
 			try {
 				await activate(walletconnect, undefined, true, (error) => console.log(error));
+				if (account) {
+					setIsWalletConnect(true)
+					setWalletModal(false)
+				} else {
+					setIsWalletConnect(false)
+				}
 			} catch (error) {
 				console.log(error)
 				// toast.error(error)
@@ -31,6 +44,12 @@ const WalletModal = ({ setWalletModal, walletModal }) => {
 		} else if (type == "coinbase") {
 			try {
 				await activate(walletlink, undefined, true, (error) => console.log(error));
+				if (account) {
+					setIsWalletConnect(true)
+					setWalletModal(false)
+				} else {
+					setIsWalletConnect(false)
+				}
 			} catch (error) {
 				console.log(error)
 				// toast.error(error)

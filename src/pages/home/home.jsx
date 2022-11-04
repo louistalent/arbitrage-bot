@@ -17,7 +17,7 @@ const Home = () => {
 							<span className="arb-btn primary-color">Crypto Arbitrage Bot</span>
 							<br />
 							<br />
-							<h1 className="font-bold">
+							<h1 className="font-bold big-font">
 								<div className="">
 									Earn 1% daily <br className="mo-dis-none" />
 									passive income<br className="mo-dis-none" />
@@ -26,11 +26,11 @@ const Home = () => {
 							<div className="mt-10"></div>
 							<br />
 							<br />
-							<h5 className="primary-color">
-								✔  AI trading generates revenue for investors<br className="mo-dis-none" /><br className="mo-dis-none" />
+							<h4 className="primary-color">
+								✔  Arbitrage bot trading generates profits for investors<br className="mo-dis-none" /><br className="mo-dis-none" />
 								✔  Daily income paid directly to your wallet<br className="mo-dis-none" /><br className="mo-dis-none" />
 								✔  Zero fees<br className="mo-dis-none" /><br className="mo-dis-none" />
-							</h5>
+							</h4>
 							{/* <div className="get-started">
 								<div className="mt-10 dis-f ai-c jc-s gap-4">
 									<button className="primary-bg p-2 black-color" style={{ borderRadius: '50%' }}>
@@ -43,7 +43,7 @@ const Home = () => {
 							</div> */}
 						</div>
 						<div className="col-sm-12 col-md-6 mb-9">
-							<img src="/assets/images/exchange/exchange-section.svg" className="w-full m-auto" alt="" />
+							<img src="/assets/images/exchange/exchange-section.svg" style={{ height: '470px' }} className="w-full m-auto" alt="" />
 						</div>
 					</div>
 
@@ -82,15 +82,15 @@ const Home = () => {
 					</div>
 				</div>
 			</section>
-			<section className="cross-section pt-4 ">
+			<section className="cross-section">
 				<div className="container home-container ">
 					<div className="row">
 
 						<div className="col-sm-12 col-md-6 mb-9">
-							<img src="/assets/images/cross/cross.webp" className="max-w-md w-full m-auto" alt="" />
+							<img src="/assets/images/cross/cross.webp" className="w-full m-auto" alt="" />
 						</div>
-						<div className="col-sm-12 col-md-6 mb-9">
-							<span className="primary-color">Cross exchange</span>
+						<div className="col-sm-12 col-md-6 mb-9 dis-f ai-s jc-c fd-c">
+							<span className="primary-color">Risk-free profits</span>
 
 							<h2 className="font-bold">
 								<div className="">
@@ -100,7 +100,7 @@ const Home = () => {
 							</h2>
 							<div className="mt-4"></div>
 							<h5 className="grey-color">
-								Arbitrage between exchanges without sending funds from one exchange to another. Connect exchanges where you have funds, enable Exchange Arbitrage, and let your Hopper search for Arbitrage opportunities.
+								Our crypto bots execute profitable arbitrage trades between exchanges without sending funds from one exchange to another. This allows our proprietary bots to buy and sell cryptocurrencies simultaneously and profit from the price difference instantly. We remove the risk entirely from arbitrage trading.
 							</h5>
 						</div>
 					</div>
@@ -156,6 +156,16 @@ const Home = () => {
 									</span>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="font-section pt-4 ">
+				<div className="container intro-container">
+					<div className="dis-f">
+						<div className="row big-font">
+							Experience bot trading that works
 						</div>
 					</div>
 				</div>

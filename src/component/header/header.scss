@@ -20,6 +20,42 @@ header {
     left: 0;
     right: 0;
 
+    .connected-btn {
+        position: relative;
+
+
+
+        .disconnect-drop {
+            background: rgb(218, 213, 213);
+            position: absolute;
+
+            top: 35px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            gap: 10px;
+            border-radius: 10px;
+            padding: 7px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        // .disconnect-drop-bg {
+        //     position: fixed;
+        //     left: 0;
+        //     right: 0;
+        //     top: 0;
+        //     bottom: 0;
+        //     z-index: -1;
+        // }
+
+        .disconnect-drop:hover {
+            color: #5D5FEF;
+        }
+    }
+
+
     .header-container {
         width: 0;
     }
@@ -168,7 +204,7 @@ header {
     @media (min-width:600px) {
         .logo-container {
             position: absolute;
-            top: 20%;
+            top: 25%;
         }
     }
 

@@ -132,6 +132,10 @@
     align-items: center;
 }
 
+.ai-s {
+    align-items: flex-start;
+}
+
 
 .cu-po {
     cursor: pointer;
