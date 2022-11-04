@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BsChevronDown, BsChevronCompactUp } from "react-icons/bs";
 import { AiOutlineMinus, AiOutlineClose } from "react-icons/ai";
@@ -7,12 +7,24 @@ import { FaTwitter, FaTelegramPlane, FaInstagram, FaFacebookF, FaGithub } from "
 import "./header.scss";
 import WalletModal from '../WalletModal';
 import { RiArrowRightLine } from "react-icons/ri";
-
+import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core';
 
 const Header = () => {
 	const [walletModal, setWalletModal] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
-
+	const [walletAddress, setWalletaddress] = useState();
+	const { activate, connector, account, library, ...props } = useWeb3React();
+	const setWallet = async(add)=>{
+		const address = add.slice(0,6)+'...'+add.slice(-3)
+		setWalletaddress(address);
+		setWalletModal(false)
+	}
+	useEffect(()=>{
+		if(account)
+		{
+			setWallet(account)
+		}
+	},[account])
 	return (
 		<header className='white'>
 			<div className='container dis-f'>
@@ -61,10 +73,14 @@ const Header = () => {
 
 					</div>
 					<div onClick={() => setIsMobile(false)} className={`${isMobile ? 'hamburger-bg' : ''} dis-n`}></div>
-					<button onClick={() => setWalletModal(true)} className='btn w10 white-bg grey-color' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
+					{walletAddress==undefined?<button onClick={() => setWalletModal(true)} className='btn w10 white-bg grey-color' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
 						<h6>CONNECT</h6>
 						<RiArrowRightLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
-					</button>
+					</button>:<button className='btn w10 white-bg grey-color' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
+						<h6>{walletAddress}</h6>
+						<RiArrowRightLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
+					</button>}
+					
 				</div>
 				{/* <div className='dis-f ai-c flex1'>
 					<div className='justify jc-e flex2'>
