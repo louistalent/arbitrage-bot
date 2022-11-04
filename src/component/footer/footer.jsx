@@ -13,7 +13,7 @@ const Footer = () => {
                             <br />
                             <h1 className='grey-color'>Community</h1>
                             <h4 className='grey-color mo-dis-none'>
-                                Join Optimus' thriving community on...
+                                Join Arbitrage Plus thriving community on...
                             </h4>
                         </div>
                         <div className="social-link-container gap-4 mt-8">
@@ -32,7 +32,7 @@ const Footer = () => {
                                 Stuck? Check out our tutorials on
                                 {' '}
                                 <span className='underline'>
-                                    Optimus Academy.
+                                    Arbitrage Plus Academy.
                                 </span>
                                 <span className='desktop-none'>
                                     {' '}Still can't find what you're looking for?
@@ -41,7 +41,9 @@ const Footer = () => {
                             <br className='desktop-none' />
                             <div className=" mt-8 desktop-none ">
                                 <h4 className='grey-color underline'>
-                                    Contact us
+                                    <a href="arbitrageplus@protonmail.com">
+                                        Contact us
+                                    </a>
                                 </h4>
                             </div>
                             <div className="contactus mt-8">
@@ -49,7 +51,9 @@ const Footer = () => {
                                     Still can't find what you're looking for?
                                 </h4>
                                 <h4 className='grey-color underline'>
-                                    Contact us
+                                    <a href="arbitrageplus@protonmail.com grey-color underline">
+                                        Contact us
+                                    </a>
                                 </h4>
                             </div>
                         </div>

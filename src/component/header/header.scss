@@ -78,19 +78,22 @@ header {
         margin-left: 20px;
     }
 
-    ul li {
-        padding: 0 10px;
-        cursor: pointer;
-        color: rgb(13, 12, 67) !important;
+    .hamburger-list {
+        color: white !important;
     }
 
-    ul li:hover {
-        color: #FCBF07;
+    ul li a {
+        padding: 0 10px;
+        cursor: pointer;
+        color: white !important;
     }
+
 
     ul {
         margin-bottom: 0;
+        margin-top: 0;
         padding: 0px;
+        height: 100%;
     }
 
     .hamburger-icon-container {
@@ -140,6 +143,10 @@ header {
         margin-top: 10px;
     }
 
+    .hamburger-list {
+        align-items: center;
+    }
+
     .hamburger-box ul li:hover {
         // box-shadow: 0px 0px 10px #FCBF07;
         // border-radius: 5px;
@@ -152,7 +159,7 @@ header {
     }
 
     .hamburger-cancel-container .hamburger-cancel-btn:hover {
-        color: #5D5FEF;
+        // color: #5D5FEF;
         cursor: pointer;
     }
 

@@ -23,13 +23,29 @@ const Home = () => {
 									passive income<br className="mo-dis-none" />
 								</div>
 							</h1>
-							<div className="mt-10"></div>
+							<div className="mt-10 mo-dis-none"></div>
 							<br />
 							<br />
-							<h4 className="primary-color">
-								✔  Arbitrage bot trading generates profits for investors<br className="mo-dis-none" /><br className="mo-dis-none" />
-								✔  Daily income paid directly to your wallet<br className="mo-dis-none" /><br className="mo-dis-none" />
-								✔  Zero fees<br className="mo-dis-none" /><br className="mo-dis-none" />
+							<h4 className="primary-color tl">
+								<div className="dis-f ai-s jc-s gap-4 mt-2">
+									<span className=""> ✔ </span>
+									<div className="">
+										Arbitrage bot trading generates profits for investors<br className="" />
+									</div>
+								</div>
+								<div className="dis-f ai-s jc-s gap-4 mt-2">
+									<span className=""> ✔ </span>
+									<div className="">
+										Daily income paid directly to your wallet<br className="" />
+									</div>
+								</div>
+								<div className="dis-f ai-s jc-s gap-4 mt-2">
+									<span className=""> ✔ </span>
+									<div className="">
+										Zero fees<br className="" />
+									</div>
+
+								</div>
 							</h4>
 							{/* <div className="get-started">
 								<div className="mt-10 dis-f ai-c jc-s gap-4">
@@ -43,7 +59,7 @@ const Home = () => {
 							</div> */}
 						</div>
 						<div className="col-sm-12 col-md-6 mb-9">
-							<img src="/assets/images/exchange/exchange-section.svg" style={{ height: '470px' }} className="w-full m-auto" alt="" />
+							<img src="/assets/images/exchange/exchange-section.svg" className="w-full m-auto exchange-img" alt="" />
 						</div>
 					</div>
 
@@ -75,7 +91,7 @@ const Home = () => {
 								<img src="/assets/images/exchange/profit.svg" alt="" className="" />
 								<div className="tl">
 									<h4 className="nobold">Profit</h4>
-									<span className="icon-grey-color mt-1">From profit</span>
+									<span className="icon-grey-color mt-1">From price</span>
 								</div>
 							</div>
 						</div>
@@ -175,8 +191,9 @@ const Home = () => {
 					<div className="exp-row exp-rou-1">
 						<div className="part h10">
 							<h4 className="px-8">Exchange Arbitrage</h4>
-							<span className="black-color mt-4 px-8">
-								Arbitrage bot is an AI trading bot that was trained on real historical market data. Arbitrage bot automatically executes profitable trades, earning an average return of 1% every single day.
+							<span className="black-color mt-4 px-8" style={{ fontSize: '20px' }}>
+								Exchange arbitrage involves trading virtual currencies across two different exchange platforms. Exchange arbitrage is a straightforward way of conducting crypto arbitrage.
+								This is the basic form of arbitrage trading, where a trader tries to generate profit by buying crypto on one exchange and selling it on another exchange at a higher price.
 							</span>
 						</div>
 						<div className="flex1 h10">
@@ -193,8 +210,10 @@ const Home = () => {
 						</div>
 						<div className="part h10">
 							<h4 className="px-8">Triangular Arbitrage</h4>
-							<span className="black-color mt-4 px-8">
-								Arbitrage bot can buy tokens back from the market to stop the price from falling. Arbitrage bot will always keep the price in a stable range and maintain an unbreakable floor.
+							<span className="black-color mt-4 px-8" style={{ fontSize: '20px' }}>
+								Triangular arbitrage takes advantage of pricing inefficiencies among different pairs of cryptocurrencies on the same exchange. With this strategy, an investor starts with one cryptocurrency and then trades it for another cryptocurrency on that same exchange — one which is undervalued relative to the first crypto.
+
+								The investor would then trade that second cryptocurrency for a third cryptocurrency which is relatively overvalued when compared with the first. Finally, the investor would trade that third cryptocurrency for the first crypto, completing the circuit potentially a little richer.
 							</span>
 						</div>
 
@@ -202,8 +221,9 @@ const Home = () => {
 					<div className="exp-row exp-rou-3">
 						<div className="part h10">
 							<h4 className="px-8">Proprietary Grid Bot</h4>
-							<span className="black-color mt-4 px-8">
-								Arbitrage bot uses a portion of the revenue it creates to buy up more liquidity over time. This creates resilience to liquidity shocks and creates additional revenue through swap fees.
+							<span className="black-color mt-4 px-8" style={{ fontSize: '20px' }}>
+								Generate profit from small price fluctuations as the market moves sideways. Most markets are moving sideways most of the time, while strong price moves are usually short-lived. GRID trading allows making a continuous profit when other strategies fail to make any profit at all!
+								This, combined with our arbitrage bots, allows us to generate profits continuously regardless of what the markets are doing.
 							</span>
 						</div>
 						<div className="flex1 h10">

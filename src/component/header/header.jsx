@@ -56,16 +56,19 @@ const Header = () => {
 							<AiOutlineClose onClick={() => setIsMobile(false)} className='cu-po hamburger-cancel-btn black-color' fontSize={'35px'} />
 						</div>
 
-						{/* <ul className='hamburger justify li-none-style'>
+						<ul className='hamburger justify li-none-style'>
+							<li className='hamburger-list'>
+								<Link to='/'>Account</Link>
+							</li>
 							<li className='hamburger-list'>
 								<Link to='/'>
-									Why Cryptohopper
+									Contract
 								</Link>
 							</li>
 							<li className='hamburger-list'>
-								<Link to='/'>Solutions</Link>
+								<Link to='/'>Whitepaper</Link>
 							</li>
-							<li className='hamburger-list' onClick={() => setWalletModal(true)}>
+							{/* <li className='hamburger-list' onClick={() => setWalletModal(true)}>
 								<Link to='/'>Pricing</Link>
 							</li>
 							<li className='hamburger-list'>
@@ -76,8 +79,8 @@ const Header = () => {
 							</li>
 							<li className='hamburger-list'>
 								<Link to='/'>Company</Link>
-							</li>
-						</ul> */}
+							</li> */}
+						</ul>
 
 					</div>
 					<div onClick={() => setIsMobile(false)} className={`${isMobile ? 'hamburger-bg' : ''} dis-n`}></div>

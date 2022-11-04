@@ -5,6 +5,11 @@
         font-size: 70px;
     }
 
+    .exchange-img {
+        height: 470px;
+
+    }
+
     .smart {
         position: absolute;
         top: 0;
@@ -37,6 +42,7 @@
         display: flex;
         flex-direction: column;
         padding-top: 14rem;
+        padding-bottom: 3rem;
         text-align: left;
         margin: 0 auto;
     }
@@ -57,6 +63,10 @@
         .get-started {
             justify-content: center;
         }
+
+        .exchange-img {
+            height: 100%;
+        }
     }
 }
 
@@ -68,7 +78,10 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        padding: 10rem 4rem;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
 
     .icon-grey-color {
@@ -86,7 +99,7 @@
     padding-top: 120px;
     background: rgba(255, 255, 255, 0.88);
 
-    .intro-containerp {
+    .intro-container {
         // mx-auto dis-f fd-c py-4 sm: pb-24
         margin: 0 auto;
         display: flex;
@@ -100,8 +113,10 @@
     }
 
     @media (max-width:600px) {
-        .intro-containerp {
+        .intro-container {
             padding-bottom: 1rem 0;
+            padding-bottom: 0rem;
+            text-align: center;
         }
     }
 }
@@ -120,7 +135,7 @@
         .home-container {
             // <divclassName="container mx-auto home-container dis-f fd-c pt-32 sm:pt-56 text-center sm:text-left">
             text-align: center;
-            padding-top: 3rem;
+            padding-top: 0rem;
         }
     }
 }
@@ -163,7 +178,7 @@
         .exp-container {
             // <divclassName="container mx-auto home-container dis-f fd-c pt-32 sm:pt-56 text-center sm:text-left">
             text-align: center;
-            padding-top: 8rem;
+            padding-top: 4rem;
         }
 
         .exp-row {
