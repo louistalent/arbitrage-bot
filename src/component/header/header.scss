@@ -10,7 +10,8 @@ header {
     -webkit-box-pack: justify !important;
     -ms-flex-pack: justify !important;
     justify-content: space-between !important;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 108, 255);
+    color: white !important;
     z-index: 100;
     padding: 12px 0;
     border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
@@ -19,8 +20,12 @@ header {
     left: 0;
     right: 0;
 
+    .header-container {
+        width: 0;
+    }
+
     .site-logo {
-        max-width: 176px;
+        max-width: 260px;
         width: 100%;
     }
 
@@ -115,6 +120,25 @@ header {
         cursor: pointer;
     }
 
+    .fake-button {
+        // hidden sm: inline-block sm:opacity-0
+        display: inline-block;
+
+        opacity: 0;
+        padding: 7px 10px;
+        border-radius: 25px;
+    }
+
+    .logo-container {
+        // sm: absolute sm:top-1/4
+        // dis-f ai-c justify-start gap-2
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 0.5rem;
+
+    }
+
     @media (max-width:991px) {
         .hamburger-icon-container {
             display: flex;
@@ -138,6 +162,23 @@ header {
 
         .hamburger-box .hamburger {
             display: inline !important;
+        }
+    }
+
+    @media (min-width:600px) {
+        .logo-container {
+            position: absolute;
+            top: 20%;
+        }
+    }
+
+    @media (max-width:600px) {
+        .header-container {
+            width: 100%;
+        }
+
+        .fake-button {
+            display: none;
         }
     }
 

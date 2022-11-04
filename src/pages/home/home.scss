@@ -29,14 +29,161 @@
         color: rgb(0, 178, 200);
     }
 
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 14rem;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .get-started {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    @media (max-width:600px) {
+        .home-container {
+            // <divclassName="container mx-auto home-container dis-f fd-c pt-32 sm:pt-56 text-center sm:text-left">
+            text-align: center;
+            padding-top: 8rem;
+        }
+
+        .get-started {
+            justify-content: center;
+        }
+    }
 }
 
 .icon-section {
     background-color: rgb(247, 253, 253);
+
+    .icon-container {
+        // mx-auto dis-f fd-c py-4 sm: pt-12
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 10rem 4rem;
+    }
+
+    .icon-grey-color {
+        color: rgba(13, 12, 67, 0.55);
+    }
+
+    @media (max-width:600px) {
+        .icon-container {
+            padding: 4rem 4rem;
+        }
+    }
 }
 
 .intro-section {
     background: rgba(255, 255, 255, 0.88);
+
+    .intro-containerp {
+        // mx-auto dis-f fd-c py-4 sm: pb-24
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 6rem;
+    }
+
+    @media (max-width:600px) {
+        .intro-containerp {
+            padding-bottom: 1rem 0;
+        }
+    }
+}
+
+.cross-section {
+    background: rgba(255, 255, 255, 0.88);
+
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    @media (max-width:600px) {
+        .home-container {
+            // <divclassName="container mx-auto home-container dis-f fd-c pt-32 sm:pt-56 text-center sm:text-left">
+            text-align: center;
+            padding-top: 3rem;
+        }
+    }
+}
+
+.exp-section {
+    background: rgba(255, 255, 255, 0.88);
+
+    .exp-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10rem;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    .exp-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 400px;
+        width: 100%;
+
+        .part {
+            flex: 1;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .exp-background {
+        background-repeat: no-repeat !important;
+        background-size: 100% 100% !important;
+        width: 100%;
+        height: 400px;
+    }
+
+    @media (max-width:600px) {
+        .exp-container {
+            // <divclassName="container mx-auto home-container dis-f fd-c pt-32 sm:pt-56 text-center sm:text-left">
+            text-align: center;
+            padding-top: 8rem;
+        }
+
+        .exp-row {
+            flex-direction: column;
+            margin-top: 50px;
+
+            .flex1 {
+                height: 400px !important;
+                width: 100%;
+            }
+
+            .exp-background {
+                width: 100% !important;
+                height: 400px;
+            }
+
+            height: 100%;
+            gap: 50px;
+            text-align: left;
+        }
+
+        .exp-rou-1 {
+            flex-direction: column-reverse;
+        }
+
+        .exp-rou-3 {
+            flex-direction: column-reverse;
+        }
+    }
 }
 
 
@@ -61,6 +208,8 @@
     border-radius: 10px;
 }
 
+
+
 .request-setting-modal-container {
     position: fixed;
     top: 0;
@@ -71,11 +220,35 @@
     align-items: center;
     justify-content: center;
     transform: translateX(0px);
-    animation: 0.3s ease-in-out 0s 1 normal forwards running opacity-animation;
+    animation: 0.3s ease-in-out 0s 1 normal forwards running react-responsive-modal-overlay-in;
     overflow-y: auto;
     padding-top: 3%;
     padding-bottom: 3%;
     z-index: 99999999999;
+}
+
+@keyframes react-responsive-modal-overlay-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes react-responsive-modal-in {
+    0% {
+        -webkit-transform: scale(.96);
+        transform: scale(.96);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: scale(100%);
+        transform: scale(100%);
+        opacity: 1;
+    }
 }
 
 .request-setting-modal-container {
@@ -93,15 +266,16 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(100, 100, 100, 0.7);
+    background: rgba(4, 40, 94, 0.9);
     z-index: 9998;
 }
 
 .request-setting-modal-body {
+    animation: 300ms ease 0s 1 normal none running react-responsive-modal-in;
     max-width: 400px;
     margin: auto;
     width: 100%;
-    background: #e7e4e4;
+    background: rgb(4, 25, 56);
     z-index: 9999;
     border-radius: 15px;
     display: flex;
@@ -113,7 +287,9 @@
 
 .request-modal-header {
     border-bottom: 1px rgba(128, 128, 128, 0.25) solid;
-    background: #e7e4e4;
+    background: rgb(4, 25,
+            56);
+
 }
 
 .modal-content {

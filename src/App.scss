@@ -1,8 +1,13 @@
-@import url('https://rsms.me/inter/inter.css');
+// @import url('https://rsms.me/inter/inter.css');
+
+@font-face {
+    font-family: Archivo;
+    src: url('./assets/font/Archivo.ttf');
+}
 
 html,
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Archivo';
     font-size: 16px;
 }
 
@@ -10,7 +15,7 @@ body {
 
     html,
     body {
-        font-family: 'Inter var', sans-serif;
+        font-family: 'Archivo';
         font-size: 16px;
         color: rgb(13, 12, 67);
     }
@@ -22,8 +27,10 @@ body {
     }
 }
 
+
 section {
     margin-top: -1px !important;
+    font-family: 'Archivo';
 }
 
 footer {
@@ -31,26 +38,32 @@ footer {
 }
 
 h1 {
+    font-family: 'Archivo';
     font-size: 48px;
 }
 
 h2 {
+    font-family: 'Archivo';
     font-size: 40px;
 }
 
 h3 {
+    font-family: 'Archivo';
     font-size: 32px;
 }
 
 h4 {
+    font-family: 'Archivo';
     font-size: 26px;
 }
 
 h5 {
+    font-family: 'Archivo';
     font-size: 18px;
 }
 
 h6 {
+    font-family: 'Archivo';
     font-size: 14px;
 }
 
@@ -60,6 +73,7 @@ iframe {
 
 a {
     text-decoration: none;
+    font-family: 'Archivo';
 }
 
 // component css
@@ -284,26 +298,27 @@ input:focus-visible {
 }
 
 .rect-frame-modal {
-    border: 1px solid #363636;
-    border-radius: 5px;
+    text-transform: unset;
+    color: rgb(177, 187, 206) !important;
+    background-color: rgb(43, 66, 106);
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+    border-radius: 8px;
+    width: 100%;
     position: relative;
-    padding: 14px 20px;
+    cursor: pointer;
 
-    input {
-        background: transparent;
-        color: white;
-    }
-
-    .react-frame-title {
-        position: absolute;
-        top: -20px;
-        left: 10px;
-        font-size: 14px;
-        color: #545454;
-        padding: 5px;
-        background: #141414;
-    }
 }
+
+.rect-frame-modal:hover {
+    color: rgb(228, 229, 233) !important;
+    background-color: rgb(56, 77, 115);
+    cursor: pointer;
+}
+
+
 
 .checker-container {
     background: #1C1C1C;

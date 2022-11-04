@@ -6,94 +6,61 @@ const Footer = () => {
     return (
         <footer className='res-pt6 res-pb6 white-color'>
             <section className='container'>
-                <div className='row'>
+                <div className='row mobile-p2rem'>
 
-                    <div className="col-sm-12 col-md-3 col-lg-3 mb-6 flex flex-col gap-8">
-                        <div className="flex items-center justify-start gap-2" style={{ width: '230px' }}>
-
-                            <img src="/url-logo.jpg" style={{ width: '100%', maxHeight: '100%' }} alt="" className="" />
-                            {/* <div className='text-center leading-4'>
-                                <h5 className='' style={{ margin: '0!important' }}>FLASH</h5>
-                                <span style={{ fontSize: '10px' }}>
-                                    <span className='primary-color'>AU</span>DIT
-                                </span>
-                            </div> */}
+                    <div className="top-line col-sm-12 col-md-6 col-lg-6 mb-6 flex flex-col gap-8">
+                        <div className="flex items-center justify-start gap-2" >
+                            <br />
+                            <h1 className='grey-color'>Community</h1>
+                            <h4 className='grey-color mo-dis-none'>
+                                Join Optimus' thriving community on...
+                            </h4>
                         </div>
-                        <p className="grey-color">
-                            Flash Technologies : Business Center 1, M Floor, The Meydan Hotel, Nad Al
-                            Sheba, Dubai, U.A.E.
-                        </p>
+                        <div className="social-link-container gap-4 mt-8">
+                            <h4 className='grey-color social-link'><a href="" className="grey-color">Telegram</a></h4>
+                            <h4 className='grey-color social-link'><a href="" className="grey-color">Discord</a></h4>
+                            <h4 className='grey-color social-link'><a href="" className="grey-color">Twitter</a></h4>
+                            <h4 className='grey-color social-link'><a href="" className="grey-color">Medium</a></h4>
+                        </div>
                     </div>
 
-                    <div className="col-sm-12 col-md-3 col-lg-2 mb-6">
-                        <h5 className="">Features</h5>
+                    <div className="top-line col-sm-12 col-md-6 col-lg-6 mb-6">
                         <br />
-                        <h6 className="">Automatic Trading</h6>
-                        <h6 className="">Exchange Arbitrage</h6>
-                        <h6 className="">Market Making Bot</h6>
-                        <h6 className="">Social trading</h6>
-                        <h6 className="">Algorithm Intelligence (AI)</h6>
-                        <h6 className="">Trailing Stops</h6>
-                        <h6 className="">Paper Trading</h6>
-                        <h6 className="">Strategy Designer</h6>
-                        <h6 className="">Backtesting</h6>
-                        <h6 className="">Exchanges</h6>
-                        <h6 className="">All Features</h6>
-                    </div>
-
-                    <div className="col-sm-12 col-md-3 col-lg-2 mb-6">
-                        <h5 className="">Resources</h5>
-                        <br />
-                        <Link to={'/'}>
-                            <h6 className="">Get Started</h6>
-                        </Link>
-                        <h6 className="">
-                            <Link to={'/portolio'}>
-                                Tutorials
-                            </Link>
-                        </h6>
-                        <h6 className="">
-                            <a href="" className="">
-                                Documentation
-                            </a>
-                        </h6>
-                    </div>
-
-                    <div className="col-sm-12 col-md-3 col-lg-2 mb-6">
-                        <h5 className="">Company</h5>
-                        <br />
-                        <h6 className="">
-                            <a href="" target={'_blank'} className="">About Us</a>
-                        </h6>
-                        <h6 className="">
-                            <a href="" target={'_blank'} className="">Careers</a>
-                        </h6>
-                        <h6 className="">
-                            <a href="" target={'_blank'} className="">Press</a>
-                        </h6>
-                        <h6 className="">
-                            <a href="" target={'_blank'} className="">Contact</a>
-                        </h6>
-                        <h6 className="">
-                            <a href="" target={'_blank'} className="">Terms</a>
-                        </h6>
-                    </div>
-
-                    <div className="col-sm-12 col-md-3 col-lg-3 mb-6">
-                        <h5 className="">Join Our Newsletter</h5>
-                        <br />
-                        <p>
-                            Will send you weekly updates for your better
-                            finance management.
-                        </p>
+                        <h1 className='grey-color'>Tutorials</h1>
+                        <div className="">
+                            <h4 className='grey-color '>
+                                Stuck? Check out our tutorials on
+                                {' '}
+                                <span className='underline'>
+                                    Optimus Academy.
+                                </span>
+                                <span className='desktop-none'>
+                                    {' '}Still can't find what you're looking for?
+                                </span>
+                            </h4>
+                            <br className='desktop-none' />
+                            <div className=" mt-8 desktop-none ">
+                                <h4 className='grey-color underline'>
+                                    Contact us
+                                </h4>
+                            </div>
+                            <div className="contactus mt-8">
+                                <h4 className="grey-color">
+                                    Still can't find what you're looking for?
+                                </h4>
+                                <h4 className='grey-color underline'>
+                                    Contact us
+                                </h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className='res-mt3' style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}></div>
-                <div className="mt-4 text-center">
+                {/* <div className='res-mt3' style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}></div> */}
+                {/* <div className="mt-4 text-center">
                     <h6 className="grey-color">
                         ©2017 - 2022 Copyright by Arbitrage Bot - All rights reserved.
                     </h6>
-                </div>
+                </div> */}
             </section>
         </footer>
     )
