@@ -69,27 +69,27 @@ const Home = () => {
 				<div className="container icon-container ">
 					<div className="row py-6 ">
 						<div className="col-md-4 mb-10 tl jc-c dis-f">
-							<div className="dis-f gap-7 ai-c m-auto jc-c mb-4 mo-fd-c">
+							<div className="dis-f gap-7 ai-c m-auto jc-c mb-4 mo-fd-c table-fd-c">
 								<img src="/assets/images/exchange/exchange.svg" alt="" className="" />
-								<div className="tl">
+								<div className="tl mo-tc">
 									<h4 className="nobold">Exchange</h4>
 									<span className="icon-grey-color mt-1">Arbitrage&nbsp;differences</span>
 								</div>
 							</div>
 						</div>
 						<div className="col-md-4 mb-10 tl jc-c dis-f">
-							<div className="dis-f gap-7 ai-c m-auto jc-c mb-4 mo-fd-c">
+							<div className="dis-f gap-7 ai-c m-auto jc-c mb-4 mo-fd-c table-fd-c">
 								<img src="/assets/images/exchange/market.svg" alt="" className="" />
-								<div className="tl">
+								<div className="tl mo-tc">
 									<h4 className="nobold">Market</h4>
 									<span className="icon-grey-color mt-1">Arbitrage</span>
 								</div>
 							</div>
 						</div>
 						<div className="col-md-4 mb-10 tl jc-c dis-f">
-							<div className="dis-f gap-7 ai-c m-auto jc-c mb-4 mo-fd-c">
+							<div className="dis-f gap-7 ai-c m-auto jc-c mb-4 mo-fd-c table-fd-c">
 								<img src="/assets/images/exchange/profit.svg" alt="" className="" />
-								<div className="tl">
+								<div className="tl mo-tc">
 									<h4 className="nobold">Profit</h4>
 									<span className="icon-grey-color mt-1">From price</span>
 								</div>
@@ -128,7 +128,7 @@ const Home = () => {
 				<div className="container intro-container">
 					<div className="">
 						<div className="row">
-							<div className="col-sm-12 col-md-4 mb-4">
+							<div className="col-sm-12 col-md-12 col-lg-4 mb-4 h-10">
 								<div className="security-card frame-div p-7">
 									<div className="">
 										<h1 className="opacity-20">01</h1>
@@ -146,7 +146,7 @@ const Home = () => {
 									</div>
 								</div>
 							</div>
-							<div className="col-sm-12 col-md-4 mb-4">
+							<div className="col-sm-12 col-md-12 col-lg-4 mb-4 h-10">
 								<div className="security-card frame-div p-7">
 									<h1 className="opacity-20">02</h1>
 									<h4 className="black-color">
@@ -155,9 +155,10 @@ const Home = () => {
 									<span className="black-color">
 										Arbitrage Plus automatically pays out 1% daily returns, including the weekends, as our bots are running 24/7. You have the option to manually transfer your profits to your stake to compound your returns.
 									</span>
+									<br />
 								</div>
 							</div>
-							<div className="col-sm-12 col-md-4 mb-4">
+							<div className="col-sm-12 col-md-12 col-lg-4 mb-4 h-10">
 								<div className="security-card frame-div p-7">
 									<h1 className="opacity-20">03</h1>
 									<h4 className="black-color">
@@ -165,7 +166,8 @@ const Home = () => {
 									</h4>
 									<span className="black-color">
 										We believe that passive income is for everyone. You shouldn't have to pay crazy high fees. Arbitrage Plus is 100% free to use. You're welcome!
-
+										<br />
+										<br />
 										<br />
 										<br />
 									</span>

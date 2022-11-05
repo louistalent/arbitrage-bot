@@ -1,13 +1,13 @@
 // @import url('https://rsms.me/inter/inter.css');
 
 @font-face {
-    font-family: Archivo;
-    src: url('./assets/font/Archivo.ttf');
+    font-family: sofiapro;
+    src: url('./assets/font/sofiapro-light.otf');
 }
 
 html,
 body {
-    font-family: 'Archivo';
+    font-family: 'sofiapro';
     font-size: 16px;
 }
 
@@ -15,7 +15,7 @@ body {
 
     html,
     body {
-        font-family: 'Archivo';
+        font-family: 'sofiapro';
         font-size: 16px;
         color: rgb(13, 12, 67);
     }
@@ -30,7 +30,7 @@ body {
 
 section {
     margin-top: -1px !important;
-    font-family: 'Archivo';
+    font-family: 'sofiapro';
 }
 
 footer {
@@ -38,32 +38,32 @@ footer {
 }
 
 h1 {
-    font-family: 'Archivo';
+    font-family: 'sofiapro';
     font-size: 48px;
 }
 
 h2 {
-    font-family: 'Archivo';
+    font-family: 'sofiapro';
     font-size: 40px;
 }
 
 h3 {
-    font-family: 'Archivo';
+    font-family: 'sofiapro';
     font-size: 32px;
 }
 
 h4 {
-    font-family: 'Archivo';
+    font-family: 'sofiapro';
     font-size: 26px;
 }
 
 h5 {
-    font-family: 'Archivo';
+    font-family: 'sofiapro';
     font-size: 18px;
 }
 
 h6 {
-    font-family: 'Archivo';
+    font-family: 'sofiapro';
     font-size: 14px;
 }
 
@@ -73,7 +73,7 @@ iframe {
 
 a {
     text-decoration: none;
-    font-family: 'Archivo';
+    font-family: 'sofiapro';
 }
 
 // component css

@@ -60,6 +60,10 @@
             padding-top: 8rem;
         }
 
+        .big-font {
+            font-size: 50px;
+        }
+
         .get-started {
             justify-content: center;
         }
@@ -117,6 +121,11 @@
             padding-bottom: 1rem 0;
             padding-bottom: 0rem;
             text-align: center;
+        }
+
+        .big-font {
+            margin: auto;
+            font-size: 60px;
         }
     }
 }

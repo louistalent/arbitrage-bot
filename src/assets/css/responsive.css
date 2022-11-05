@@ -1250,4 +1250,14 @@
     .mobile-p2rem {
         padding: 0 2rem;
     }
+
+    .mo-tc {
+        text-align: center;
+    }
+}
+
+@media (max-width:900px) {
+    .table-fd-c {
+        flex-direction: column;
+    }
 }
