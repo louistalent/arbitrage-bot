@@ -37,8 +37,8 @@ const Header = () => {
 		<header className='white'>
 			<div className='container dis-f'>
 				{/* row-reverse-991 : class name*/}
-				<div className='dis-f ai-c jc-sb mobile-just-start flex4 gap-2'>
-					<div className='dis-f ai-c jc-se header-container'>
+				<div className='dis-f ai-c jc-sb mobile-just-start gap-2 w-full'>
+					<div className='dis-f ai-c jc-s header-container flex1'>
 						{/* <div onClick={() => setIsMobile(true)} className='hamburger-icon-container'>
 							<AiOutlineMinus className='' style={{ position: 'absolute', color: 'black', top: '0%' }} fontSize={'25px'} />
 							<AiOutlineMinus className='' style={{ position: 'absolute', color: 'black', top: '20%' }} fontSize={'25px'} />
@@ -51,14 +51,16 @@ const Header = () => {
 						</Link>
 					</div>
 
-					<div className={`${isMobile ? 'hamburger-box' : ''} justify`}>
+					<div className={`${isMobile ? 'hamburger-box' : ''} justify mo-dis-none
+					`}>
 						<div className={`${isMobile ? 'hamburger-cancel-container' : ''} dis-n`}>
 							<AiOutlineClose onClick={() => setIsMobile(false)} className='cu-po hamburger-cancel-btn black-color' fontSize={'35px'} />
 						</div>
 
 						<ul className='hamburger justify li-none-style'>
+
 							<li className='hamburger-list'>
-								<Link to='/'>Account</Link>
+								<Link to='/dashboard'>Account</Link>
 							</li>
 							<li className='hamburger-list'>
 								<Link to='/'>
@@ -68,6 +70,7 @@ const Header = () => {
 							<li className='hamburger-list'>
 								<Link to='/'>Whitepaper</Link>
 							</li>
+
 							{/* <li className='hamburger-list' onClick={() => setWalletModal(true)}>
 								<Link to='/'>Pricing</Link>
 							</li>
@@ -83,28 +86,31 @@ const Header = () => {
 						</ul>
 
 					</div>
-					<div onClick={() => setIsMobile(false)} className={`${isMobile ? 'hamburger-bg' : ''} dis-n`}></div>
-					{(walletAddress && walletAddress.length <= 0 || isWalletConnect === false) ? <button onClick={() => setWalletModal(true)} className='btn w10 white-bg grey-color' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
-						<h6>CONNECT</h6>
-						<RiArrowRightLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
-					</button> :
-						<div className="connected-btn">
-							<button onClick={() => { setWalletBtnClick(!walletBtnClick) }} className='btn w10 white-bg grey-color' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
-								<h6>{walletAddress}</h6>
-								<RiArrowRightLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
-							</button>
-							{
-								walletBtnClick &&
-								<>
-									<button onClick={() => { setIsWalletConnect(false); setWalletBtnClick(!walletBtnClick); }} className='disconnect-drop'>
-										<h5>Disconnect</h5>
-										<RiCloseCircleLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
-									</button>
-									{/* <div onClick={setWalletBtnClick(!walletBtnClick)} className="disconnect-drop-bg"></div> */}
-								</>
-							}
-						</div>
-					}
+
+					<div className="flex1 dis-f ai-c jc-e">
+						<div onClick={() => setIsMobile(false)} className={`${isMobile ? 'hamburger-bg' : ''} dis-n`}></div>
+						{(walletAddress && walletAddress.length <= 0 || isWalletConnect === false) ? <button onClick={() => setWalletModal(true)} className='btn  white-bg grey-color' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
+							<h6>CONNECT</h6>
+							<RiArrowRightLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
+						</button> :
+							<div className="connected-btn">
+								<button onClick={() => { setWalletBtnClick(!walletBtnClick) }} className='btn white-bg grey-color' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
+									<h6>{walletAddress}</h6>
+									<RiArrowRightLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
+								</button>
+								{
+									walletBtnClick &&
+									<>
+										<button onClick={() => { setIsWalletConnect(false); setWalletBtnClick(!walletBtnClick); }} className='disconnect-drop'>
+											<h5>Disconnect</h5>
+											<RiCloseCircleLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
+										</button>
+										{/* <div onClick={setWalletBtnClick(!walletBtnClick)} className="disconnect-drop-bg"></div> */}
+									</>
+								}
+							</div>
+						}
+					</div>
 
 				</div>
 				{/* <div className='dis-f ai-c flex1'>

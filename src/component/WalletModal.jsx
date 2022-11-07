@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineDown } from "react-icons/ai";
 import { injected, walletconnect, walletlink } from '../util/connector';
 import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core';
-// import { toast } from 'react-toastify';
+
+// import { toast } from 'react-toast'
 import { RiArrowRightLine } from "react-icons/ri";
 
 const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
@@ -23,10 +24,10 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 				} else {
 					setIsWalletConnect(false)
 				}
-			} catch (e) {
+			} catch (error) {
 				setIsWalletConnect(false)
-				// toast.error(e.message)
-				console.log(e.message)
+				console.log(error)
+				// toast.error(error.message)
 			}
 		} else if (type == "walletconnect") {
 			try {
@@ -39,7 +40,7 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 				}
 			} catch (error) {
 				console.log(error)
-				// toast.error(error)
+				// toast.error(error.message)
 			}
 		} else if (type == "coinbase") {
 			try {
@@ -52,7 +53,7 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 				}
 			} catch (error) {
 				console.log(error)
-				// toast.error(error)
+				// toast.error(error.message)
 			}
 		}
 	}

@@ -44,6 +44,15 @@
     text-align: center;
 }
 
+/* width */
+.w0 {
+    width: 0;
+}
+
+.w10 {
+    width: 100%;
+}
+
 /* color css*/
 .white {
     color: white;
@@ -149,6 +158,12 @@
 }
 
 .justify-s {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.justify-js {
     display: flex;
     justify-content: space-between;
     align-items: center;
