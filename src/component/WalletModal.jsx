@@ -2,17 +2,19 @@ import { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineDown } from "react-icons/ai";
 import { injected, walletconnect, walletlink } from '../util/connector';
 import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core';
-// import { toast } from 'react-toastify';
+import { Link, useParams,useNavigate } from "react-router-dom";
+// import { toast } from 'react-toast'
 import { RiArrowRightLine } from "react-icons/ri";
 
 const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
-
+	const navigate = useNavigate()
 	const { activate, connector, account, library, ...props } = useWeb3React();
 	const [height, setHeight] = useState(0);
 	useEffect(() => {
 		setHeight(window.innerHeight);
 	}, [window.innerHeight])
 	const connect = async (type) => {
+		console.log(type)
 		if (type == "metamask") {
 			try {
 				await activate(injected, undefined, true, (error) => console.log(error));
@@ -22,9 +24,11 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 				} else {
 					setIsWalletConnect(false)
 				}
-			} catch (e) {
+				navigate('/dashboard')
+			} catch (error) {
 				setIsWalletConnect(false)
-				console.log(e.message)
+				console.log(error)
+				// toast.error(error.message)
 			}
 		} else if (type == "walletconnect") {
 			try {
@@ -35,9 +39,10 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 				} else {
 					setIsWalletConnect(false)
 				}
+				navigate('/dashboard')
 			} catch (error) {
 				console.log(error)
-				// toast.error(error)
+				// toast.error(error.message)
 			}
 		} else if (type == "coinbase") {
 			try {
@@ -48,9 +53,10 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 				} else {
 					setIsWalletConnect(false)
 				}
+				navigate('/dashboard')
 			} catch (error) {
 				console.log(error)
-				// toast.error(error)
+				// toast.error(error.message)
 			}
 		}
 	}

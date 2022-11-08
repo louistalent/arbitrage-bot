@@ -1,239 +1,358 @@
 import { useState, useEffect } from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams,useNavigate } from "react-router-dom";
 import { FaTelegramPlane, FaPlus, FaMinus } from "react-icons/fa";
 import Layout from "../../component/layout/layout";
 import WalletModal from "../../component/WalletModal";
+import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core';
 import "./dashboard.scss";
 
 const Dashboard = () => {
-
+    const navigate  = useNavigate();
+    const { activate, connector, account, library, ...props } = useWeb3React();
+    const [trasnsactionHistory, setTransactionHistory] = useState([
+        {
+            asset: "BUSD",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "BUSD",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "BUSD",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        }
+    ]);
+    const [history, setHistory] = useState([
+        {
+            date: '15th August, 2022',
+            content: 'USDC token launched on stable fund for staking'
+        },
+        {
+            date: '15th August, 2022',
+            content: 'USDC token launched on stable fund for staking'
+        },
+        {
+            date: '15th August, 2022',
+            content: 'USDC token launched on stable fund for staking'
+        }
+    ])
+    const [getStartUSDC, setGetStartUSDC] = useState(false);
+    const [getStartUSDT, setGetStartUSDT] = useState(false);
+    useEffect(()=>{
+        if(!account){
+            navigate('/')
+        }
+    },[])
     return (
         <Layout>
-            <section className="exchange-section">
-                <div className="container home-container">
+            <section className="dashboard-section">
+                <div className="dashboard-container">
                     <div className="row">
-                        <div className="col-sm-12 col-md-6 mb-9">
-                            <span className="arb-btn primary-color">Crypto Arbitrage Bot</span>
-                            <br />
-                            <br />
-                            <h1 className="font-bold big-font">
-                                <div className="">
-                                    Earn 1% daily <br className="mo-dis-none" />
-                                    passive income<br className="mo-dis-none" />
-                                </div>
-                            </h1>
-                            <div className="mt-10 mo-dis-none"></div>
-                            <br />
-                            <br />
-                            <h4 className="primary-color tl">
-                                <div className="dis-f ai-s jc-s gap-4 mt-2">
-                                    <span className=""> ✔ </span>
-                                    <div className="">
-                                        Arbitrage bot trading generates profits for investors<br className="" />
-                                    </div>
-                                </div>
-                                <div className="dis-f ai-s jc-s gap-4 mt-2">
-                                    <span className=""> ✔ </span>
-                                    <div className="">
-                                        Daily income paid directly to your wallet<br className="" />
-                                    </div>
-                                </div>
-                                <div className="dis-f ai-s jc-s gap-4 mt-2">
-                                    <span className=""> ✔ </span>
-                                    <div className="">
-                                        Zero fees<br className="" />
-                                    </div>
-
-                                </div>
-                            </h4>
-                            {/* <div className="get-started">
-								<div className="mt-10 dis-f ai-c jc-s gap-4">
-									<button className="primary-bg p-2 black-color" style={{ borderRadius: '50%' }}>
-										<span>
-											<FaLongArrowAltRight style={{ color: 'white', fontSize: '25px' }} />
-										</span>
-									</button>
-									Let's get started
-								</div>
-							</div> */}
-                        </div>
-                        <div className="col-sm-12 col-md-6 mb-9">
-                            <img src="/assets/images/exchange/exchange-section.svg" className="w-full m-auto exchange-img" alt="" />
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-            <section className="icon-section pt-4 ">
-                <div className="container icon-container ">
-                    <div className="row py-6 ">
-                        <div className="col-md-4 mb-10 tl jc-c dis-f">
-                            <div className="dis-f gap-7 ai-c m-auto jc-c mb-4 mo-fd-c table-fd-c">
-                                <img src="/assets/images/exchange/exchange.svg" alt="" className="" />
-                                <div className="tl mo-tc">
-                                    <h4 className="nobold">Exchange</h4>
-                                    <span className="icon-grey-color mt-1">Arbitrage&nbsp;differences</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 mb-10 tl jc-c dis-f">
-                            <div className="dis-f gap-7 ai-c m-auto jc-c mb-4 mo-fd-c table-fd-c">
-                                <img src="/assets/images/exchange/market.svg" alt="" className="" />
-                                <div className="tl mo-tc">
-                                    <h4 className="nobold">Market</h4>
-                                    <span className="icon-grey-color mt-1">Arbitrage</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 mb-10 tl jc-c dis-f">
-                            <div className="dis-f gap-7 ai-c m-auto jc-c mb-4 mo-fd-c table-fd-c">
-                                <img src="/assets/images/exchange/profit.svg" alt="" className="" />
-                                <div className="tl mo-tc">
-                                    <h4 className="nobold">Profit</h4>
-                                    <span className="icon-grey-color mt-1">From price</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className="cross-section">
-                <div className="container home-container ">
-                    <div className="row">
-
-                        <div className="col-sm-12 col-md-6 mb-9">
-                            <img src="/assets/images/cross/cross.webp" className="w-full m-auto" alt="" />
-                        </div>
-                        <div className="col-sm-12 col-md-6 mb-9 dis-f ai-s jc-c fd-c">
-                            <span className="primary-color">Risk-free profits</span>
-
-                            <h2 className="font-bold">
-                                <div className="">
-                                    Exchange Arbitrage,<br className="mo-dis-none" />
-                                    without withdrawls<br className="mo-dis-none" />
-                                </div>
-                            </h2>
-                            <div className="mt-4"></div>
+                        <div className="col-sm-12 col-md-4 mb-9">
                             <h5 className="grey-color">
-                                Our crypto bots execute profitable arbitrage trades between exchanges without sending funds from one exchange to another. This allows our proprietary bots to buy and sell cryptocurrencies simultaneously and profit from the price difference instantly. We remove the risk entirely from arbitrage trading.
+                                Hello, Nick Nechanicky!
+                            </h5>
+                            <div className="justify-js w0 mt-6 gap-2">
+                                <h1>
+                                    $0.00
+                                </h1>
+                                <h5 className="grey-color">
+                                    Total Balance
+                                </h5>
+                            </div>
+                            <div className="justify-js w0 mt-6 gap-2">
+                                <button className="">Send</button>
+                                <button className="">Deposit</button>
+                            </div>
+                        </div>
+                        <div className="col-sm-12 col-md-4 mb-9">
+                            <div className="announcement-box">
+                                <h4>Announcement!</h4>
+                                <span>Please click here to view the refund amount you qualify for.</span>
+                            </div>
+                        </div>
+                        <div className="col-sm-12 col-md-4 mb-9">
+                            <div className="daily-box">
+                                <h3>Earn 1.5% Interest Daily</h3>
+                                <h3>on Chain</h3>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <br />
+                    <br />
+                    <br />
+
+                    <div className="row">
+                        <div className="col-sm-12 col-md-6 mb-9">
+                            <div className="get-start">
+                                <div className="get-start-body">
+                                    <div className="w0 justify-js gap-2">
+                                        <div className="crypto-logo">
+                                            <img src="/assets/images/dashboard/USDC.svg" alt="USDC" />
+                                        </div>
+                                        <div>
+                                            <h5>USDC</h5>
+                                            <h6 className="grey-color">$0.0000</h6>
+                                        </div>
+                                    </div>
+                                    <div className="mt-8">
+                                        <h5 className="site-lite-color">Start Earning 1.5% interest on your USDC daily</h5>
+                                    </div>
+                                    <div className="mt-6 justify-s">
+                                        <h5 className="">Didn't start yet?</h5>
+                                        <img className="emoticon" src="/assets/images/dashboard/emoticon.png" alt="" />
+                                    </div>
+                                    <div className="mt-12">
+                                        <button className="w-full">
+                                            <h5>Get Started</h5>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="get-start-footer">
+                                    <div className="justify-s">
+                                        <h5 className="">
+                                            Daily USDC Rewards
+                                        </h5>
+                                        <h5 className="">
+                                            0.0000
+                                        </h5>
+                                    </div>
+                                    <div className="justify-s mt-2">
+                                        <h5 className="nobold">
+                                            Hourly USDC Rewards
+                                        </h5>
+                                        <h5 className="nobold">
+                                            0.0000
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-sm-12 col-md-6 mb-9">
+                            <div className="get-start">
+                                <div className="get-start-body">
+                                    <div className="w0 justify-js gap-2">
+                                        <div className="crypto-logo">
+                                            <img src="/assets/images/dashboard/USDT.svg" className="usdt-img" alt="USDC" />
+                                        </div>
+                                        <div>
+                                            <h5>USDT</h5>
+                                            <h6 className="grey-color">$0.0000</h6>
+                                        </div>
+                                    </div>
+                                    <div className="mt-8">
+                                        <h5 className="site-lite-color">Start Earning 1.5% interest on your USDT daily</h5>
+                                    </div>
+                                    <div className="mt-6 justify-s">
+                                        <h5 className="">Didn't start yet?</h5>
+                                        <img className="emoticon" src="/assets/images/dashboard/emoticon.png" alt="" />
+                                    </div>
+                                    <div className="mt-12">
+                                        <button className="w-full">
+                                            <h5>Get Started</h5>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="get-start-footer">
+                                    <div className="justify-s">
+                                        <h5 className="">
+                                            Daily USDT Rewards
+                                        </h5>
+                                        <h5 className="">
+                                            0.0000
+                                        </h5>
+                                    </div>
+                                    <div className="justify-s mt-2">
+                                        <h5 className="nobold">
+                                            Hourly BUUSDTSD Rewards
+                                        </h5>
+                                        <h5 className="nobold">
+                                            0.0000
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="assets-container">
+                        <div className="justify-js gap-4 w0">
+                            <h5 className="nobold">
+                                PortFolio&nbsp;Graph
+                            </h5>
+                            <button className="grey-bg">
+                                MATIC
+                            </button>
+                            <button className="grey-bg">
+                                MATIC
+                            </button>
+                            <button className="">
+                                USDC
+                            </button>
+                        </div>
+                        <div className="row">
+                            <div className="col-sm-12 col-md-8 mt-4">
+                                <div className="h10 justify">
+                                    <h2 className="site-lite-color">Calculating Your Assets...</h2>
+                                </div>
+                            </div>
+                            <div className="col-sm-12 col-md-4 mt-4">
+                                <div className="justify-js w0 mt-4">
+                                    <img className="mr-4" src="/assets/images/dashboard/USDC.svg" style={{ width: '35px', height: '35px' }} alt="USDC" />
+                                    <h4 className="">Staking&nbsp;Info</h4>
+                                </div>
+                                <div className="justify-s mt-8">
+                                    <div className="justify-s gap-2">
+                                        <div className="staking-img-box">
+                                            <img src="/assets/images/staking/invest.png" alt="" className="" />
+                                        </div>
+                                        <div className="">
+                                            <h5 className="nobold">Total investment</h5>
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <h5 className="site-lite-color">
+                                            126071062.49 USDC
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div className="justify-s mt-6">
+                                    <div className="justify-s gap-2">
+                                        <div className="staking-img-box">
+                                            <img src="/assets/images/staking/investors.png" alt="" className="" />
+                                        </div>
+                                        <div className="">
+                                            <h5 className="nobold">Total investors</h5>
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <h5 className="site-lite-color">
+                                            12747
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div className="justify-s mt-6">
+                                    <div className="justify-s gap-2">
+                                        <div className="staking-img-box">
+                                            <img src="/assets/images/staking/reward.png" alt="" className="" />
+                                        </div>
+                                        <div className="">
+                                            <h5 className="nobold">Total rewards</h5>
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <h5 className="site-lite-color">
+                                            64164106.84 USDC
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="history-container mt-8">
+                        <div className="justify-js gap-4 w0">
+                            <h5 className="nobold">
+                                Transaction&nbsp;history
                             </h5>
                         </div>
-                    </div>
+                        <br />
+                        <div className="row ">
+                            <div className="col-sm-12 col-md-9 mt-4">
+                                <table className="">
+                                    <thead className="">
+                                        <th className="">Asset</th>
+                                        <th className="">Type</th>
+                                        <th className="">Date</th>
+                                        <th className="">Amount</th>
+                                        <th className="">Destination</th>
+                                        <th className="">TxID</th>
+                                    </thead>
+                                    <tbody className="">
+                                        {
+                                            trasnsactionHistory.map((item, index) => (
+                                                <tr key={index}>
+                                                    <td className="">{item.asset}</td>
+                                                    <td className="">{item.type}</td>
+                                                    <td className="">{item.date}</td>
+                                                    <td className="">{item.amount}</td>
+                                                    <td className="">{item.desination}</td>
+                                                    <td className="">{item.txid}</td>
+                                                </tr>
+                                            ))
+                                        }
 
-                </div>
-            </section>
+                                    </tbody>
+                                </table>
+                            </div>
 
-            <section className="intro-section pt-4 ">
-                <div className="container intro-container">
-                    <div className="">
-                        <div className="row">
-                            <div className="col-sm-12 col-md-12 col-lg-4 mb-4 h-10">
-                                <div className="security-card frame-div p-7">
-                                    <div className="">
-                                        <h1 className="opacity-20">01</h1>
-                                    </div>
-                                    <div>
-                                        <h4 className="black-color">
-                                            Arbitrage Trading Bot
-                                        </h4>
+                            <div className="col-sm-12 col-md-3 mt-4">
+                                <div className="history">
+                                    {
+                                        history.map((item, index) => (
+                                            <div key={index} className="history-row">
+                                                <div className="history-row-container">
+                                                    {
+                                                        history && history.length - 1 !== index && <>
+                                                            <div className="history-tail"></div>
+                                                        </>
+                                                    }
 
-                                    </div>
-                                    <div>
-                                        <span className="black-color">
-                                            Arbitrage Plus is a proprietary trading bot that will generate profits for investors via risk-free exchange & triangular arbitrage. Arbitrage Plus earns about 2-3% daily, and we distribute 1% daily returns to our investors.
-                                        </span>
-                                    </div>
+                                                    <div className="history-icon">
+                                                        <span className="">
+                                                            <img src="/assets/images/dashboard/circle.svg" alt="" className="" />
+                                                        </span>
+                                                    </div>
+                                                    <div className="history-content">
+                                                        <div className="history-title">
+                                                            {item.date}
+                                                        </div>
+                                                        <div className="history-description">
+                                                            {item.content}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
                                 </div>
                             </div>
-                            <div className="col-sm-12 col-md-12 col-lg-4 mb-4 h-10">
-                                <div className="security-card frame-div p-7">
-                                    <h1 className="opacity-20">02</h1>
-                                    <h4 className="black-color">
-                                        Daily Income
-                                    </h4>
-                                    <span className="black-color">
-                                        Arbitrage Plus automatically pays out 1% daily returns, including the weekends, as our bots are running 24/7. You have the option to manually transfer your profits to your stake to compound your returns.
-                                    </span>
-                                    <br />
-                                </div>
-                            </div>
-                            <div className="col-sm-12 col-md-12 col-lg-4 mb-4 h-10">
-                                <div className="security-card frame-div p-7">
-                                    <h1 className="opacity-20">03</h1>
-                                    <h4 className="black-color">
-                                        Zero Fees
-                                    </h4>
-                                    <span className="black-color">
-                                        We believe that passive income is for everyone. You shouldn't have to pay crazy high fees. Arbitrage Plus is 100% free to use. You're welcome!
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
-                                    </span>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <section className="font-section pt-4 ">
-                <div className="container intro-container">
-                    <div className="dis-f">
-                        <div className="row big-font">
-                            Experience bot trading that works
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <section className="exp-section pb-4">
-                <div className="container exp-container">
-                    <div className="exp-row exp-rou-1">
-                        <div className="part h10">
-                            <h4 className="px-8">Exchange Arbitrage</h4>
-                            <span className="black-color mt-4 px-8" style={{ fontSize: '20px' }}>
-                                Exchange arbitrage involves trading virtual currencies across two different exchange platforms. Exchange arbitrage is a straightforward way of conducting crypto arbitrage.
-                                This is the basic form of arbitrage trading, where a trader tries to generate profit by buying crypto on one exchange and selling it on another exchange at a higher price.
-                            </span>
-                        </div>
-                        <div className="flex1 h10">
-                            <div className="h10 exp-background" style={{ background: 'url(/assets/images/exp/ai.png)' }}>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="exp-row exp-rou-2">
-                        <div className="flex1 h10">
-                            <div className="h10 exp-background" style={{ background: 'url(/assets/images/exp/price.png)' }}>
-
-                            </div>
-                        </div>
-                        <div className="part h10">
-                            <h4 className="px-8">Triangular Arbitrage</h4>
-                            <span className="black-color mt-4 px-8" style={{ fontSize: '20px' }}>
-                                Triangular arbitrage takes advantage of pricing inefficiencies among different pairs of cryptocurrencies on the same exchange. With this strategy, an investor starts with one cryptocurrency and then trades it for another cryptocurrency on that same exchange — one which is undervalued relative to the first crypto.
-
-                                The investor would then trade that second cryptocurrency for a third cryptocurrency which is relatively overvalued when compared with the first. Finally, the investor would trade that third cryptocurrency for the first crypto, completing the circuit potentially a little richer.
-                            </span>
-                        </div>
-
-                    </div>
-                    <div className="exp-row exp-rou-3">
-                        <div className="part h10">
-                            <h4 className="px-8">Proprietary Grid Bot</h4>
-                            <span className="black-color mt-4 px-8" style={{ fontSize: '20px' }}>
-                                Generate profit from small price fluctuations as the market moves sideways. Most markets are moving sideways most of the time, while strong price moves are usually short-lived. GRID trading allows making a continuous profit when other strategies fail to make any profit at all!
-                                This, combined with our arbitrage bots, allows us to generate profits continuously regardless of what the markets are doing.
-                            </span>
-                        </div>
-                        <div className="flex1 h10">
-                            <div className="h10 exp-background" style={{ background: 'url(/assets/images/exp/liquidity.png)' }}>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
         </Layout>
