@@ -13,7 +13,6 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 		setHeight(window.innerHeight);
 	}, [window.innerHeight])
 	const connect = async (type) => {
-		console.log(type)
 		if (type == "metamask") {
 			try {
 				await activate(injected, undefined, true, (error) => console.log(error));
@@ -25,7 +24,6 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 				}
 			} catch (e) {
 				setIsWalletConnect(false)
-				// toast.error(e.message)
 				console.log(e.message)
 			}
 		} else if (type == "walletconnect") {
