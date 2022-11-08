@@ -98,21 +98,21 @@ const Header = () => {
 
 					<div className="flex1 dis-f ai-c jc-e">
 						<div onClick={() => setIsMobile(false)} className={`${isMobile ? 'hamburger-bg' : ''} dis-n`}></div>
-						{(walletAddress && walletAddress.length <= 0 || isWalletConnect === false) ? <button onClick={() => setWalletModal(true)} className='btn  white-bg grey-color' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
-							<h6>CONNECT</h6>
-							<RiArrowRightLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
+						{(walletAddress && walletAddress.length <= 0 || isWalletConnect === false) ? <button onClick={() => setWalletModal(true)} className='btn white-bg grey-color wallet-connect-btn ' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
+							<h6 className='mauto'>CONNECT</h6>
+							<RiArrowRightLine className='mauto' style={{ fontSize: '20px', fontWeight: 'bold' }} />
 						</button> :
 							<div className="connected-btn">
-								<button onClick={() => { setWalletBtnClick(!walletBtnClick) }} className='btn white-bg grey-color' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
-									<h6>{walletAddress}</h6>
-									<RiArrowRightLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
+								<button onClick={() => { setWalletBtnClick(!walletBtnClick) }} className='btn white-bg grey-color wallet-connect-btn' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
+									<h6 className='mauto'>{walletAddress}</h6>
+									<RiArrowRightLine className='mauto' style={{ fontSize: '20px', fontWeight: 'bold' }} />
 								</button>
 								{
 									walletBtnClick &&
 									<>
 										<button onClick={() => { setIsWalletConnect(false); setWalletBtnClick(!walletBtnClick); }} className='disconnect-drop'>
-											<h5>Disconnect</h5>
-											<RiCloseCircleLine style={{ fontSize: '20px', fontWeight: 'bold' }} />
+											<h5 className='mauto'>Disconnect</h5>
+											<RiCloseCircleLine className='mauto' style={{ fontSize: '20px', fontWeight: 'bold' }} />
 										</button>
 										{/* <div onClick={setWalletBtnClick(!walletBtnClick)} className="disconnect-drop-bg"></div> */}
 									</>

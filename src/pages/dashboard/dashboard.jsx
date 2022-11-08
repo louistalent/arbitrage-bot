@@ -106,8 +106,8 @@ const Dashboard = () => {
                                 <div className="justify gap-2 tc w10">
                                     <div className="justify gap-2">
                                         <h5 className="w10 tc">with Token</h5>
-                                        <img style={{ width: '30px' }} src="/assets/images/dashboard/USDT.svg" alt="" />
-                                        <img style={{ width: '30px' }} src="/assets/images/dashboard/USDC.svg" alt="" />
+                                        <img style={{ height: '100%', width: '30px' }} src="/assets/images/dashboard/USDT.svg" alt="" />
+                                        <img style={{ height: '100%', width: '28px' }} src="/assets/images/dashboard/USDC.svg" alt="" />
                                     </div>
                                 </div>
                                 <div className="">
