@@ -1,13 +1,12 @@
 
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { BsChevronDown, BsChevronCompactUp } from "react-icons/bs";
-import { AiOutlineMinus, AiOutlineClose } from "react-icons/ai";
-import { FaTwitter, FaTelegramPlane, FaInstagram, FaFacebookF, FaGithub, FaSleigh } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
 import "./header.scss";
 import WalletModal from '../WalletModal';
 import { RiArrowRightLine, RiCloseCircleLine } from "react-icons/ri";
-import { useWeb3React, UnsupportedChainIdError } from '@web3-react/core';
+import { useWeb3React } from '@web3-react/core';
+import { NotificationManager } from 'react-notifications';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Header = () => {
 	const [walletModal, setWalletModal] = useState(false);
@@ -15,6 +14,7 @@ const Header = () => {
 	const [walletAddress, setWalletaddress] = useState();
 	const [isWalletConnect, setIsWalletConnect] = useState(false);
 	const [walletBtnClick, setWalletBtnClick] = useState(false);
+	const navigate = useNavigate();
 
 	const { activate, connector, chainId, account, library, ...props } = useWeb3React();
 
@@ -24,8 +24,15 @@ const Header = () => {
 		setWalletaddress(address);
 		setWalletModal(false)
 	}
+
+	const dashboardPage = () => {
+		if (!account) {
+			NotificationManager.error('You have to connect wallet', "ERROR")
+		} else {
+			navigate('/dashboard')
+		}
+	}
 	useEffect(() => {
-		console.log('asdf')
 		if (account) {
 			setWallet(account)
 			setIsWalletConnect(true)
@@ -46,7 +53,7 @@ const Header = () => {
 						</div> */}
 						<Link to='/'>
 							<div className="logo-container" >
-								<img src="/url-logo.png" alt="" className="site-logo" />
+								<img title='Arbitrage Plus | Trading Bot' src="/url-logo.png" alt="" className="site-logo" />
 							</div>
 						</Link>
 					</div>
@@ -59,8 +66,10 @@ const Header = () => {
 
 						<ul className='hamburger justify li-none-style'>
 
-							<li className='hamburger-list'>
-								<Link to='/dashboard'>Account</Link>
+							<li onClick={dashboardPage} className='hamburger-list'>
+								<a href="#" className="">
+									Account
+								</a>
 							</li>
 							<li className='hamburger-list'>
 								<Link to='/'>

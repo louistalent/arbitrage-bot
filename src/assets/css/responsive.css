@@ -1269,6 +1269,10 @@
     .mo-tc {
         text-align: center;
     }
+
+    .mo-w10 {
+        width: 100%;
+    }
 }
 
 @media (max-width:900px) {

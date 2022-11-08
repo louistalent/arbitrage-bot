@@ -26,7 +26,7 @@ const Home = () => {
 							<div className="mt-10 mo-dis-none"></div>
 							<br />
 							<br />
-							<h4 className="primary-color tl">
+							<h4 className=" tl">
 								<div className="dis-f ai-s jc-s gap-4 mt-2">
 									<span className=""> ✔ </span>
 									<div className="">
