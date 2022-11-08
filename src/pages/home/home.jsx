@@ -13,7 +13,7 @@ const Home = () => {
 			<section className="exchange-section">
 				<div className="container home-container">
 					<div className="row">
-						<div className="col-sm-12 col-md-6 mb-9">
+						<div className="col-sm-12 col-md-5 home-container-padding ">
 							{/* <span className="arb-btn primary-color">Crypto Arbitrage Bot</span> */}
 							<br />
 							<br />
@@ -58,7 +58,7 @@ const Home = () => {
 								</div>
 							</div> */}
 						</div>
-						<div className="col-sm-12 col-md-6 mb-9">
+						<div className="col-sm-12 col-md-7 mb-9">
 							<img src="/assets/images/exchange/exchange-section.webp" className="w-full m-auto exchange-img" alt="" />
 						</div>
 					</div>
