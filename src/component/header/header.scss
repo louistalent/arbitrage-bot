@@ -23,8 +23,6 @@ header {
     .connected-btn {
         position: relative;
 
-
-
         .disconnect-drop {
             background: rgb(218, 213, 213);
             position: absolute;
@@ -221,6 +219,10 @@ header {
 
         .fake-button {
             display: none;
+        }
+
+        .wallet-connect-btn {
+            padding: 7px 15px !important;
         }
     }
 

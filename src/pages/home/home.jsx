@@ -13,8 +13,8 @@ const Home = () => {
 			<section className="exchange-section">
 				<div className="container home-container">
 					<div className="row">
-						<div className="col-sm-12 col-md-6 mb-9">
-							<span className="arb-btn primary-color">Crypto Arbitrage Bot</span>
+						<div className="col-sm-12 col-md-5 home-container-padding ">
+							{/* <span className="arb-btn primary-color">Crypto Arbitrage Bot</span> */}
 							<br />
 							<br />
 							<h1 className="font-bold big-font">
@@ -58,8 +58,8 @@ const Home = () => {
 								</div>
 							</div> */}
 						</div>
-						<div className="col-sm-12 col-md-6 mb-9">
-							<img src="/assets/images/exchange/exchange-section.svg" className="w-full m-auto exchange-img" alt="" />
+						<div className="col-sm-12 col-md-7 mb-9">
+							<img src="/assets/images/exchange/exchange-section.webp" className="w-full m-auto exchange-img" alt="" />
 						</div>
 					</div>
 
@@ -107,7 +107,7 @@ const Home = () => {
 						</div>
 						<div className="col-sm-12 col-md-6 mb-9 dis-f ai-s jc-c fd-c">
 							<span className="primary-color">Risk-free profits</span>
-
+							<br />
 							<h2 className="font-bold">
 								<div className="">
 									Exchange Arbitrage,<br className="mo-dis-none" />
@@ -222,7 +222,7 @@ const Home = () => {
 					</div>
 					<div className="exp-row exp-rou-3">
 						<div className="part h10">
-							<h4 className="px-8">Proprietary Grid Bot</h4>
+							<h4 className="px-8">Proprietary HFT Grid Bot</h4>
 							<span className="black-color mt-4 px-8" style={{ fontSize: '20px' }}>
 								Generate profit from small price fluctuations as the market moves sideways. Most markets are moving sideways most of the time, while strong price moves are usually short-lived. GRID trading allows making a continuous profit when other strategies fail to make any profit at all!
 								This, combined with our arbitrage bots, allows us to generate profits continuously regardless of what the markets are doing.
