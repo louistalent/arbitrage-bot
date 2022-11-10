@@ -5,6 +5,7 @@
         padding-right: 8rem;
     }
 
+
     .announcement-box {
         background: #ff03030d 0 0 no-repeat padding-box !important;
         border-bottom: 6px solid #e77171 !important;
@@ -51,12 +52,14 @@
 
     .get-start-footer {
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         justify-content: space-between;
         background: #ece3fb 0 0 no-repeat padding-box !important;
         border-radius: 0 0 15px 15px !important;
         padding: 24px;
         width: 100%;
+        gap: 30px;
+        align-items: center;
         // min-height: 310px;
     }
 
@@ -221,9 +224,13 @@
     }
 
     table {
+
+        width: 100%;
+
         display: block;
         height: 350px;
         overflow-y: scroll;
+
 
         thead {
             th {
@@ -239,7 +246,6 @@
         }
 
         tbody {
-
             tr {
                 font-size: 16px;
                 color: black;
@@ -262,12 +268,16 @@
     }
 
     .crypto-btn {
-        background: #8d90cf21 0 0 no-repeat padding-box !important;
+        background: #787bab1c 0 0 no-repeat padding-box !important;
         border: 0.5px solid #70707080 !important;
         border-radius: 23px !important;
-        color: #787bab !important;
-        height: 27px !important;
+        color: black !important;
+        height: 27px;
         padding: 6px 10px !important;
+    }
+    .crypto-btn-active{
+        background: #020988 !important;
+        color: white !important;
     }
 
     .stake-input {
@@ -299,6 +309,18 @@
         .info-container {
             flex-direction: column;
         }
-
+        
+    }
+    @media (max-width:950px) {
+        .get-start-footer{
+            flex-direction: column;
+            div{
+                width: 100%;
+            }
+            button{
+                width: 100%;
+            }
+        }
+        
     }
 }

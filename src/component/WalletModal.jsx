@@ -21,14 +21,16 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 		console.log(type)
 		if (type == "metamask") {
 			try {
+				
 				await activate(injected, undefined, true, (error) => console.log(error));
 				if (account) {
 					setIsWalletConnect(true)
 					setWalletModal(false)
 				} else {
 					setIsWalletConnect(false)
-					navigate('/dashboard')
 				}
+				localStorage.setItem("type","metamask")
+				navigate('/dashboard')
 			} catch (error) {
 				setIsWalletConnect(false)
 				console.log(error)
@@ -44,6 +46,8 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 				} else {
 					setIsWalletConnect(false)
 				}
+				localStorage.setItem("type","walletconnect")
+
 				navigate('/dashboard')
 			} catch (error) {
 				console.log(error)
@@ -60,6 +64,7 @@ const WalletModal = ({ setIsWalletConnect, setWalletModal, walletModal }) => {
 				} else {
 					setIsWalletConnect(false)
 				}
+				localStorage.setItem("type","coinbase")
 				navigate('/dashboard')
 			} catch (error) {
 				console.log(error)
