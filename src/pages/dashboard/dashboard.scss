@@ -224,14 +224,24 @@
     }
 
     table {
-        width: 100%;
-        thead {
-            width: 100%;
 
+        width: 100%;
+
+        display: block;
+        height: 350px;
+        overflow-y: scroll;
+
+
+        thead {
             th {
+                position: sticky;
+                top: 0;
+                z-index: 2;
                 font-size: 18px;
                 color: #474ca8 !important;
                 text-align: left;
+                background-color: white;
+                width: 200px;
             }
         }
 

@@ -114,6 +114,288 @@ const Dashboard = () => {
 		}
 
 
+    const [trasnsactionHistory, setTransactionHistory] = useState([
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        }
+    ]);
+    const [history, setHistory] = useState([
+        {
+            date: '15th August, 2022',
+            content: 'USDC token launched on stable fund for staking'
+        },
+        {
+            date: '15th August, 2022',
+            content: 'USDC token launched on stable fund for staking'
+        },
+        {
+            date: '15th August, 2022',
+            content: 'USDC token launched on stable fund for staking'
+        }
+    ])
+
+
 	}
 	const depositUsdt = async () => {
 		if (depositUsdtAmount == 0) {
@@ -587,6 +869,7 @@ const Dashboard = () => {
 						</div>
 					</div>
 
+
 					<div className="history-container mt-8">
 						<div className="justify-js gap-4 w0">
 							<h5 className="nobold">
@@ -605,6 +888,121 @@ const Dashboard = () => {
 											<th className="">Amount</th>
 											<th className="">State</th>
 										</tr>
+
+                                        </>
+                                    }
+                                    <div className="mt-8">
+                                        {
+                                            getStartUSDT ?
+                                                <button onClick={() => setGetStartUSDT(false)} className="w-full">
+                                                    <h5>Get Started</h5>
+                                                </button>
+                                                :
+                                                <div className="justify-js gap-4">
+                                                    <button className="w-full withdrow-btn">
+                                                        <h5>Withdraw</h5>
+                                                    </button>
+                                                    <button className="w-full">
+                                                        <h5>Deposit</h5>
+                                                    </button>
+                                                </div>
+                                        }
+                                    </div>
+                                </div>
+                                <div className="get-start-footer">
+                                    <div className="justify-s">
+                                        <h5 className="">
+                                            Daily USDT Rewards
+                                        </h5>
+                                        <h5 className="">
+                                            0.0000
+                                        </h5>
+                                    </div>
+                                    {/* <div className="justify-s mt-2">
+                                        <h5 className="nobold">
+                                            Hourly USDT Rewards
+                                        </h5>
+                                        <h5 className="nobold">
+                                            0.0000
+                                        </h5>
+                                    </div> */}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="assets-container">
+                        <div className="justify-js gap-4 w0">
+
+                        </div>
+                        <div className="row">
+                            <div className="col-sm-12 col-md-8 mt-4">
+                                <div className="h10 justify">
+                                    <h2 className="site-lite-color">Calculating Your Assets...</h2>
+                                </div>
+                            </div>
+                            <div className="col-sm-12 col-md-4 mt-4">
+                                <div className="dis-f jc-s ai-c gap-4">
+                                    <button className="crypto-btn grey-bg">
+                                        USDT
+                                    </button>
+                                    <button className="crypto-btn">
+                                        USDC
+                                    </button>
+                                </div>
+                                <div className="justify-js w0 mt-4">
+
+                                    <img className="mr-4" src="/assets/images/dashboard/USDC.svg" style={{ width: '35px', height: '35px' }} alt="USDC" />
+                                    <h4 className="">Staking&nbsp;Info</h4>
+                                </div>
+                                <div className="justify-s mt-8">
+                                    <div className="justify-s gap-2">
+                                        <div className="staking-img-box">
+                                            <img src="/assets/images/staking/invest.png" alt="" className="" />
+                                        </div>
+                                        <div className="">
+                                            <h5 className="nobold">Total investment</h5>
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <h5 className="site-lite-color">
+                                            126071062.49 USDC
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div className="justify-s mt-6">
+                                    <div className="justify-s gap-2">
+                                        <div className="staking-img-box">
+                                            <img src="/assets/images/staking/investors.png" alt="" className="" />
+                                        </div>
+                                        <div className="">
+                                            <h5 className="nobold">Total investors</h5>
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <h5 className="site-lite-color">
+                                            12747
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div className="justify-s mt-6">
+                                    <div className="justify-s gap-2">
+                                        <div className="staking-img-box">
+                                            <img src="/assets/images/staking/reward.png" alt="" className="" />
+                                        </div>
+                                        <div className="">
+                                            <h5 className="nobold">Total rewards</h5>
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <h5 className="site-lite-color">
+                                            64164106.84 USDC
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
 									</thead>
 									<tbody className="">

@@ -3,7 +3,7 @@
 }
 
 .exchange-section {
-    background: rgba(255, 255, 255, 0.88);
+    background-color: rgb(247, 253, 253);
 
     .big-font {
         font-size: 70px;
@@ -11,7 +11,7 @@
 
     .exchange-img {
         height: 100%;
-
+        width: 770px;
     }
 
     .home-container-padding {
@@ -66,6 +66,8 @@
             // <divclassName="container mx-auto home-container dis-f fd-c pt-32 sm:pt-56 text-center sm:text-left">
             text-align: center;
             padding-top: 8rem;
+            padding-left: 25px;
+            padding-right: 25px;
         }
 
         .big-font {
@@ -78,6 +80,27 @@
 
         .exchange-img {
             height: 100%;
+        }
+    }
+
+    @media (max-width:1370px) {
+        .exchange-img {
+            height: 100%;
+            width: 700px;
+        }
+    }
+
+    @media (max-width:1200px) {
+        .exchange-img {
+            height: 100%;
+            width: 650px;
+        }
+    }
+
+    @media (max-width:1000px) {
+        .exchange-img {
+            height: 100%;
+            width: 100%;
         }
     }
 }
@@ -107,9 +130,13 @@
     }
 }
 
+.intro-section {
+    background: rgb(247, 253, 253);
+}
+
 .font-section {
     padding-top: 120px;
-    background: rgba(255, 255, 255, 0.88);
+    background: rgb(247, 253, 253);
 
     .intro-container {
         // mx-auto dis-f fd-c py-4 sm: pb-24
@@ -140,8 +167,8 @@
 }
 
 .cross-section {
-    background: rgba(255, 255, 255, 0.88);
-    margin-top: 20px !important;
+    background-color: rgb(247, 253, 253);
+    padding-top: 20px !important;
 
     .home-container {
         display: flex;
@@ -160,7 +187,7 @@
 }
 
 .exp-section {
-    background: rgba(255, 255, 255, 0.88);
+    background: rgb(247, 253, 253);
 
     .exp-container {
         display: flex;

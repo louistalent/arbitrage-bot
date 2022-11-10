@@ -1,0 +1,65 @@
+.admin-header {
+    background: var(--secondary);
+    color: white;
+    padding: 2px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.toggle-icon {
+    cursor: pointer;
+    padding: 2px;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.toggle-icon:hover {
+    opacity: 1;
+    scale: 1.2;
+    border: 1px grey solid;
+    border-radius: 50%;
+}
+
+.admin-avatar {
+    height: 100%;
+    padding: 5px;
+    position: relative;
+
+    img {
+        width: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
+    .drop {
+        width: 84px;
+        padding: 19px 0px;
+        background-color: #191c24;
+        position: absolute;
+        top: 55px;
+        left: -14px;
+        right: 0;
+        display: none;
+        text-align: center;
+
+        span {
+            padding: 2px 0px;
+            width: 84px;
+
+            &:hover {
+                background-color: #000;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .drop-open {
+        display: flex !important;
+    }
+}

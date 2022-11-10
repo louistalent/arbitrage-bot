@@ -59,7 +59,7 @@ const Home = () => {
 							</div> */}
 						</div>
 						<div className="col-sm-12 col-md-7 mb-9">
-							<img src="/assets/images/exchange/exchange-section.webp" className="w-full m-auto exchange-img" alt="" />
+							<img src="/assets/images/exchange/exchange-section.webp" className="m-auto exchange-img" alt="" />
 						</div>
 					</div>
 
