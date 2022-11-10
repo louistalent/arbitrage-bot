@@ -5,6 +5,23 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+    --primary: #eb1616;
+    --secondary: #191c24;
+    --light: #6c7293;
+    // --dark: #000000;
+    --font-size-h1: 70px;
+    --font-size-h2: 50px;
+    --font-size-h3: 30px;
+    --font-size-h4: 24px;
+    --font-size-h5: 18px;
+    --font-size-h6: 16px;
+    --font-size-p: 16px;
+    --font-white-color: white;
+    --font-dark-color: #111111;
+}
+
+
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -206,4 +223,20 @@ button {
 
 .font20 {
     font-size: 20px;
+}
+
+
+.content {
+    min-height: 100vh;
+    background: var(--dark);
+    transition: 0.5s;
+    margin-left: 250px;
+
+    @media screen and (max-width: 992px) {
+        margin-left: 0 !important;
+    }
+}
+
+.open {
+    margin-left: 0px !important;
 }

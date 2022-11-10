@@ -221,16 +221,20 @@
     }
 
     table {
-        width: 100%;
-        overflow: hidden;
+        display: block;
+        height: 350px;
+        overflow-y: scroll;
 
         thead {
-            width: 100%;
-
             th {
+                position: sticky;
+                top: 0;
+                z-index: 2;
                 font-size: 18px;
                 color: #474ca8 !important;
                 text-align: left;
+                background-color: white;
+                width: 200px;
             }
         }
 

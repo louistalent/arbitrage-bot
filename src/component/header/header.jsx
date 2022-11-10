@@ -98,12 +98,13 @@ const Header = () => {
 
 					<div className="flex1 dis-f ai-c jc-e">
 						<div onClick={() => setIsMobile(false)} className={`${isMobile ? 'hamburger-bg' : ''} dis-n`}></div>
-						{(walletAddress && walletAddress.length <= 0 || isWalletConnect === false) ? <button onClick={() => setWalletModal(true)} className='btn white-bg grey-color wallet-connect-btn ' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
-							<h6 className='mauto'>CONNECT</h6>
-							<RiArrowRightLine className='mauto' style={{ fontSize: '20px', fontWeight: 'bold' }} />
-						</button> :
+						{(walletAddress && walletAddress.length <= 0 || isWalletConnect === false) ?
+							<button onClick={() => setWalletModal(true)} className='wallet-connect-btn'>
+								<h6 className='mauto'>CONNECT</h6>
+								<RiArrowRightLine className='mauto' style={{ fontSize: '20px', fontWeight: 'bold' }} />
+							</button> :
 							<div className="connected-btn">
-								<button onClick={() => { setWalletBtnClick(!walletBtnClick) }} className='btn white-bg grey-color wallet-connect-btn' style={{ borderRadius: '10px', padding: "7px 40px", gap: '10px' }}>
+								<button onClick={() => { setWalletBtnClick(!walletBtnClick) }} className='wallet-connect-btn' >
 									<h6 className='mauto'>{walletAddress}</h6>
 									<RiArrowRightLine className='mauto' style={{ fontSize: '20px', fontWeight: 'bold' }} />
 								</button>

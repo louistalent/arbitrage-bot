@@ -46,6 +46,230 @@ const Dashboard = () => {
             txid: "28721"
         },
         {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDT",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
+            asset: "USDC",
+            type: "type",
+            date: "10/25/2022",
+            amount: "9814",
+            desination: "desination",
+            txid: "28721"
+        },
+        {
             asset: "USDC",
             type: "type",
             date: "10/25/2022",
@@ -293,15 +517,7 @@ const Dashboard = () => {
                     </div>
                     <div className="assets-container">
                         <div className="justify-js gap-4 w0">
-                            <h5 className="nobold">
-                                Portfolio&nbsp;Graph
-                            </h5>
-                            <button className="crypto-btn grey-bg">
-                                USDT
-                            </button>
-                            <button className="crypto-btn">
-                                USDC
-                            </button>
+
                         </div>
                         <div className="row">
                             <div className="col-sm-12 col-md-8 mt-4">
@@ -310,7 +526,16 @@ const Dashboard = () => {
                                 </div>
                             </div>
                             <div className="col-sm-12 col-md-4 mt-4">
+                                <div className="dis-f jc-s ai-c gap-4">
+                                    <button className="crypto-btn grey-bg">
+                                        USDT
+                                    </button>
+                                    <button className="crypto-btn">
+                                        USDC
+                                    </button>
+                                </div>
                                 <div className="justify-js w0 mt-4">
+
                                     <img className="mr-4" src="/assets/images/dashboard/USDC.svg" style={{ width: '35px', height: '35px' }} alt="USDC" />
                                     <h4 className="">Staking&nbsp;Info</h4>
                                 </div>

@@ -11,6 +11,13 @@ import Home from './pages/home/home';
 import PageNotFound from './pages/page_not_found/page_not_found';
 import Dashboard from './pages/dashboard/dashboard';
 
+import Admin from './pages/admin/admin';
+import DepositUsdtTable from './pages/admin/depositUsdtTable';
+import DepositUsdcTable from './pages/admin/depositUsdcTable';
+import WithdrawUsdtTable from './pages/admin/withdrawUsdtTable';
+import WithdrawUsdcTable from './pages/admin/withdrawUsdcTable';
+import Reward from './pages/admin/reward';
+
 import { Web3ReactProvider } from '@web3-react/core';
 import { Web3Provider } from '@ethersproject/providers'
 import { NotificationContainer, NotificationManager } from 'react-notifications';
@@ -31,6 +38,13 @@ function App() {
           <Route path="*" element=<PageNotFound /> />
           <Route path="/" element=<Home /> />
           <Route path="/dashboard" element=<Dashboard /> />
+
+          <Route path="/home/:id" element=<Admin /> />
+          <Route path="/deposit-usdt-table/:id" element=<DepositUsdtTable /> />
+          <Route path="/deposit-usdc-table/:id" element=<DepositUsdcTable /> />
+          <Route path="/withdraw-usdt-table/:id" element=<WithdrawUsdtTable /> />
+          <Route path="/withdraw-usdc-table/:id" element=<WithdrawUsdcTable /> />
+          <Route path="/reward/:id" element=<Reward /> />
         </Routes>
       </BrowserRouter>
       <NotificationContainer />
