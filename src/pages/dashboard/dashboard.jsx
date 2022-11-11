@@ -11,12 +11,12 @@ import { NotificationContainer, NotificationManager } from 'react-notifications'
 import { ethers } from 'ethers'
 import axios from "axios";
 import abi from "../../util/ABI.json"
-
+import { injected, walletconnect, walletlink } from '../../util/connector';
 axios.defaults.baseURL = "http://127.0.0.1"
 
 const depositAddress = "0x731A75023d232af502203Be7FECe200d3B599DB3"
-const usdcAddress = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
-const usdtAddress = "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+const usdcAddress = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"
+const usdtAddress = "0xc2132D05D31c914a87C6611C10748AEb04B58e8F"
 
 const mockHis = [
 	{
@@ -235,15 +235,45 @@ const Dashboard = () => {
 		
 		})
 	}
+	const checkWallet = async()=>{
+		if(localStorage.getItem("type")=="metamask"){
+			try {
+				await activate(injected,undefined, true, (error) => console.log(error))
+			} catch (error) {
+				NotificationManager.error(error.message)
+			}
+		}else if(localStorage.getItem("type")=="walletconnect"){
+			try {
+				await activate(walletconnect).then((e)=>{
+					getAlldata()
+				})
+			} catch (error) {
+				NotificationManager.error(error.message)
+			}
+		}else if(localStorage.getItem("type")=="coinbase"){
+			try {
+				await activate(walletlink)
+				getAlldata()
+			} catch (error) {
+				NotificationManager.error(error.message)
+			}
+		}else{
+			navigate('/')
+		}
+	}
+	const getAlldata =async()=>{
+		getTransactionHistory()
+		getStakingInfo("USDC")
+		getRewardAmount()
+		getTotalRewardAmount()
+		getTotalMyDepositAmount()
+	}
+	useEffect(()=>{
+		getAlldata()
+	},[account])
 	useEffect(() => {
 		if (!account) {
-			navigate('/')
-		} else {
-			getTransactionHistory()
-			getStakingInfo("USDC")
-			getRewardAmount()
-			getTotalRewardAmount()
-			getTotalMyDepositAmount()
+			checkWallet()
 		}
 	}, [])
 
@@ -261,7 +291,15 @@ const Dashboard = () => {
 									${totalMyDepositAmount}
 								</h1>
 								<h5 className="grey-color">
-									Total Balance
+									Total&nbsp;Balance
+								</h5>
+							</div>
+							<div className="justify-js w0 mo-w10 mt-6 gap-2 mo-tc">
+								<h1>
+									$0.00
+								</h1>
+								<h5 className="grey-color">
+									Total&nbsp;TVL
 								</h5>
 							</div>
 						</div>
@@ -473,27 +511,27 @@ const Dashboard = () => {
 						</div>
 					</div>
 					<div className="assets-container">
-						<div className="justify-js gap-4 w0">
-							<h5 className="nobold">
-								Portfolio&nbsp;Graph
-							</h5>
-							<button className={`crypto-btn ${stakingInfo === 'USDT' ? 'crypto-btn-active' : ''}`} onClick={(e) => { getStakingInfo("USDT") }}>
-								USDT
-							</button>
-							<button className={`crypto-btn ${stakingInfo === 'USDC' ? 'crypto-btn-active' : ''}`} onClick={(e) => { getStakingInfo("USDC") }}>
-								USDC
-							</button>
-						</div>
+					
 						<div className="row">
 							<div className="col-sm-12 col-md-8 mt-4">
 								<div className="h10 justify">
-									<h2 className="site-lite-color">Calculating Your Assets...</h2>
+									<h2 className="site-lite-color">$0.00   Total TVL</h2>
 								</div>
 							</div>
+							
 							<div className="col-sm-12 col-md-4 mt-4">
+							<div className="justify-js gap-4 w0">
+								<button className={`crypto-btn ${stakingInfo === 'USDT' ? 'crypto-btn-active' : ''}`} onClick={(e) => { getStakingInfo("USDT") }}>
+									USDT
+								</button>
+								<button className={`crypto-btn ${stakingInfo === 'USDC' ? 'crypto-btn-active' : ''}`} onClick={(e) => { getStakingInfo("USDC") }}>
+									USDC
+								</button>
+							</div>
 								<div className="justify-js w0 mt-4">{stakingInfo == "USDC" ? <img className="mr-4" src="/assets/images/dashboard/USDC.svg" style={{ width: '35px', height: '35px' }} alt="USDC" /> : <img className="mr-4" src="/assets/images/dashboard/USDT.svg" style={{ width: '35px', height: '35px' }} alt="USDT" />}
 									<h4 className="">Staking&nbsp;Info</h4>
 								</div>
+								
 								<div className="justify-s mt-8">
 									<div className="justify-s gap-2">
 										<div className="staking-img-box">
@@ -576,7 +614,7 @@ const Dashboard = () => {
 													<td className="">{item.assets}</td>
 													<td className="">{item.type}</td>
 													<td className="">{new Date(item.time).toLocaleDateString() + ' ' + new Date(item.time).toLocaleTimeString()}</td>
-													<td className="">{item.type == "USDC" ? item.amount + "  USDC" : item.amount + "  USDT"}</td>
+													<td className="">{item.assets == "USDC" ? item.amount + "  USDC" : item.amount + "  USDT"}</td>
 													<td className="">{item.status == 1 ? "Pending" : item.status == 2 ? "Accept" : item.status == 3 ? "Reject" : "Finished"}</td>
 												</tr>
 											))

@@ -110,7 +110,7 @@ const Header = () => {
 								{
 									walletBtnClick &&
 									<>
-										<button onClick={() => { setIsWalletConnect(false); setWalletBtnClick(!walletBtnClick); }} className='disconnect-drop'>
+										<button onClick={() => { setIsWalletConnect(false); setWalletBtnClick(!walletBtnClick); localStorage.clear(); window.location.href='/' }} className='disconnect-drop'>
 											<h5 className='mauto'>Disconnect</h5>
 											<RiCloseCircleLine className='mauto' style={{ fontSize: '20px', fontWeight: 'bold' }} />
 										</button>

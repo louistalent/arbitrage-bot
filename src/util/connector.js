@@ -5,18 +5,18 @@ import { WalletLinkConnector } from '@web3-react/walletlink-connector';
 import { NETWORK_CHAIN_IDS, INFURA_ENDPOINT,INFURA_ID } from './constants';
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [NETWORK_CHAIN_IDS.eth],  //, NETWORK_CHAIN_IDS.mainnet
+  supportedChainIds: [NETWORK_CHAIN_IDS.polygon],  //, NETWORK_CHAIN_IDS.mainnet
 });
 export const walletconnect = new WalletConnectConnector({
   infuraId: INFURA_ID,
   bridge: 'https://bridge.walletconnect.org',
-  supportedChainIds: [NETWORK_CHAIN_IDS.mainnet],
-  rpc: { 1: INFURA_ENDPOINT },
+  supportedChainIds: [NETWORK_CHAIN_IDS.polygon],
+  rpc: { 137: INFURA_ENDPOINT },
   qrcode: true,
   pollingInterval: 8000,
 });
 export const walletlink = new WalletLinkConnector({
   url: INFURA_ENDPOINT,
   appName: 'Halloween Bear',
-  supportedChainIds: [NETWORK_CHAIN_IDS.eth, NETWORK_CHAIN_IDS.eth],
+  supportedChainIds: [NETWORK_CHAIN_IDS.polygon, NETWORK_CHAIN_IDS.polygon],
 });
